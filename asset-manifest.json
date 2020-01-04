@@ -1,23 +1,27 @@
 {
   "files": {
-    "main.css": "/homePage/static/css/main.d1b05096.chunk.css",
-    "main.js": "/homePage/static/js/main.6542cb6f.chunk.js",
-    "main.js.map": "/homePage/static/js/main.6542cb6f.chunk.js.map",
+    "main.css": "/homePage/static/css/main.78253620.chunk.css",
+    "main.js": "/homePage/static/js/main.5131a311.chunk.js",
+    "main.js.map": "/homePage/static/js/main.5131a311.chunk.js.map",
     "runtime-main.js": "/homePage/static/js/runtime-main.5164c2af.js",
     "runtime-main.js.map": "/homePage/static/js/runtime-main.5164c2af.js.map",
-    "static/js/2.75cbb538.chunk.js": "/homePage/static/js/2.75cbb538.chunk.js",
-    "static/js/2.75cbb538.chunk.js.map": "/homePage/static/js/2.75cbb538.chunk.js.map",
+    "static/js/2.94823b7f.chunk.js": "/homePage/static/js/2.94823b7f.chunk.js",
+    "static/js/2.94823b7f.chunk.js.map": "/homePage/static/js/2.94823b7f.chunk.js.map",
     "index.html": "/homePage/index.html",
-    "precache-manifest.55a3d0371c6729b244045f9c3655372c.js": "/homePage/precache-manifest.55a3d0371c6729b244045f9c3655372c.js",
+    "precache-manifest.08bc537385b52f321ec26f991f04193e.js": "/homePage/precache-manifest.08bc537385b52f321ec26f991f04193e.js",
     "service-worker.js": "/homePage/service-worker.js",
-    "static/css/main.d1b05096.chunk.css.map": "/homePage/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.75cbb538.chunk.js.LICENSE": "/homePage/static/js/2.75cbb538.chunk.js.LICENSE",
-    "static/media/logo.svg": "/homePage/static/media/logo.5d5d9eef.svg"
+    "static/css/main.78253620.chunk.css.map": "/homePage/static/css/main.78253620.chunk.css.map",
+    "static/js/2.94823b7f.chunk.js.LICENSE": "/homePage/static/js/2.94823b7f.chunk.js.LICENSE",
+    "static/media/riskDiceRoller.jpg": "/homePage/static/media/riskDiceRoller.8723012d.jpg",
+    "static/media/scoreboard.jpg": "/homePage/static/media/scoreboard.f2bd72e5.jpg",
+    "static/media/ticTacGrow.jpg": "/homePage/static/media/ticTacGrow.8b71040b.jpg",
+    "static/media/virtualBank.jpg": "/homePage/static/media/virtualBank.6a25bcad.jpg",
+    "static/media/wedding1crop2.jpg": "/homePage/static/media/wedding1crop2.5e6575f8.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.5164c2af.js",
-    "static/js/2.75cbb538.chunk.js",
-    "static/css/main.d1b05096.chunk.css",
-    "static/js/main.6542cb6f.chunk.js"
+    "static/js/2.94823b7f.chunk.js",
+    "static/css/main.78253620.chunk.css",
+    "static/js/main.5131a311.chunk.js"
   ]
 }
