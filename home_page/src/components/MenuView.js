@@ -88,23 +88,42 @@ class MenuView extends React.Component {
     var menuView;
     if (this.state.activeMenu[0]) {
       menuView = (
-        <About transitionOut={this.state.transitionOutMenuView}></About>
+        <About
+          windowIsLandscape={this.props.windowIsLandscape}
+          transitionOut={this.state.transitionOutMenuView}
+        ></About>
       );
     } else if (this.state.activeMenu[1]) {
       menuView = (
-        <Portfolio transitionOut={this.state.transitionOutMenuView}></Portfolio>
+        <Portfolio
+          windowIsLandscape={this.props.windowIsLandscape}
+          transitionOut={this.state.transitionOutMenuView}
+        ></Portfolio>
       );
     } else if (this.state.activeMenu[2]) {
       menuView = (
-        <Resume transitionOut={this.state.transitionOutMenuView}></Resume>
+        <Resume
+          windowIsLandscape={this.props.windowIsLandscape}
+          transitionOut={this.state.transitionOutMenuView}
+        ></Resume>
       );
     } else if (this.state.activeMenu[3]) {
       menuView = (
-        <Connect transitionOut={this.state.transitionOutMenuView}></Connect>
+        <Connect
+          windowIsLandscape={this.props.windowIsLandscape}
+          transitionOut={this.state.transitionOutMenuView}
+        ></Connect>
       );
     }
 
-    return <div className={this.state.className}>{menuView}</div>;
+    return (
+      <div
+        style={{ backgroundColor: "white" }}
+        className={this.state.className}
+      >
+        {menuView}
+      </div>
+    );
   }
 }
 

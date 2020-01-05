@@ -33,12 +33,6 @@ class Connect extends React.Component {
     this.setState({ iconClassNames });
   };
 
-  textStyle = {
-    textAlign: "center",
-    padding: "30px",
-    fontSize: "20px"
-  };
-
   render() {
     if (this.state.animationTimeout != null) {
       return null;
@@ -51,9 +45,28 @@ class Connect extends React.Component {
       containerClassName = "menuContentTransitionIn";
     }
 
+    var textStyle;
+    if (this.props.windowIsLandscape) {
+      textStyle = {
+        textAlign: "center",
+        padding: "30px",
+        fontSize: "20px",
+        color: "rgb(0,0,0,.75)"
+      };
+    } else {
+      textStyle = {
+        textAlign: "center",
+        paddingLeft: "10px",
+        paddingRight: "10px",
+        paddingTop: "20px",
+        fontSize: "18px",
+        color: "rgb(0,0,0,.75)"
+      };
+    }
+
     return (
       <div className={containerClassName}>
-        <div style={this.textStyle}>
+        <div style={textStyle}>
           Please connect with me on LinkedIn! Also, check out the source code
           for all of my projects on Github.
         </div>

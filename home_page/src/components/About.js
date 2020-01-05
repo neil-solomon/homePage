@@ -19,12 +19,6 @@ class About extends React.Component {
     this.setState({ animationTimeout: null });
   };
 
-  style = {
-    textAlign: "center",
-    padding: "30px",
-    fontSize: "20px"
-  };
-
   render() {
     if (this.state.animationTimeout != null) {
       return null;
@@ -36,14 +30,33 @@ class About extends React.Component {
       className = "menuContentTransitionIn";
     }
 
+    var style;
+    if (this.props.windowIsLandscape) {
+      style = {
+        textAlign: "center",
+        padding: "30px",
+        fontSize: "20px",
+        color: "rgb(0, 0, 0, 0.75)"
+      };
+    } else {
+      style = {
+        textAlign: "center",
+        paddingLeft: "10px",
+        paddingRight: "10px",
+        paddingTop: "20px",
+        fontSize: "18px",
+        color: "rgb(0, 0, 0, 0.75)"
+      };
+    }
+
     return (
       <div className={className}>
-        <div style={this.style}>
+        <div style={style}>
           Hello!<br></br>
-          <br></br>I am Neil Solomon, a student majoring in Computer Engineering
-          and working part-time in software development. I have experience with
-          C++, Python, and Javascript and I love creating interactive web pages
-          using React. Check out my portfolio for examples of my projects.
+          <br></br>I am a student majoring in Computer Engineering and working
+          part-time in software development. I have experience with C++, Python,
+          and Javascript and I love creating interactive web pages using React.
+          Check out my portfolio for examples of my projects!
         </div>
       </div>
     );

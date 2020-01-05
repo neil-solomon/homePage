@@ -11,25 +11,13 @@ class MenuElement extends React.Component {
     }
   }
 
-  elementStlye = {
-    display: "inline-block",
-    marginLeft: "50px",
-    marginRight: "50px"
-  };
-
-  nameStyle = {
-    fontSize: "25px",
-    cursor: "pointer",
-    display: "block",
-    textAlign: "center"
-  };
-
   underscoreStyle = {
-    fontSize: "25px",
     cursor: "pointer",
     display: "block",
     textAlign: "center",
-    marginTop: "-25px"
+    marginTop: "5px",
+    borderBottom: "1px solid rgb(0,0,225,.5)",
+    outline: "none"
   };
 
   hoverIn = () => {
@@ -51,19 +39,49 @@ class MenuElement extends React.Component {
       underscoreClassName = "menuElementUnderscoreDeactivate";
     }
 
+    var nameStyle, elementStyle;
+    if (this.props.windowIsLandscape) {
+      nameStyle = {
+        fontSize: "25px",
+        cursor: "pointer",
+        display: "block",
+        textAlign: "center",
+        outline: "none"
+      };
+      elementStyle = {
+        display: "inline-block",
+        marginLeft: "50px",
+        marginRight: "50px",
+        outline: "none"
+      };
+    } else {
+      nameStyle = {
+        fontSize: "20px",
+        cursor: "pointer",
+        display: "block",
+        textAlign: "center",
+        outline: "none"
+      };
+      elementStyle = {
+        display: "inline-block",
+        marginLeft: "30px",
+        marginRight: "30px",
+        marginBottom: "10px",
+        outline: "none"
+      };
+    }
+
     return (
       <div
-        style={this.elementStlye}
+        style={elementStyle}
         onClick={() => this.props.handleClick(this.props.id)}
         onMouseEnter={this.hoverIn}
         onMouseLeave={this.hoverOut}
       >
-        <div style={this.nameStyle} className={this.state.nameClassName}>
+        <div style={nameStyle} className={this.state.nameClassName}>
           {this.props.name}
         </div>
-        <div style={this.underscoreStyle} className={underscoreClassName}>
-          {this.props.underscore}
-        </div>
+        <div style={this.underscoreStyle} className={underscoreClassName}></div>
       </div>
     );
   }

@@ -1,17 +1,18 @@
 .header1 {
   text-align: center;
   width: 100vw;
-  height: 300px;
-  background-image: linear-gradient(rgb(0, 0, 255, 0.5), rgb(125, 0, 255, 0.5));
+  height: 100vh;
+  background-image: linear-gradient(rgb(225, 0, 0, 0.5), rgb(0, 0, 225, 0.5));
   box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.5);
   animation: headerEnter 1s forwards;
 }
 
 @keyframes headerEnter {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+
+  100% {
     opacity: 1;
   }
 }
@@ -19,24 +20,24 @@
 .header2 {
   text-align: center;
   width: 100vw;
-  background-image: linear-gradient(rgb(0, 0, 255, 0.5), rgb(125, 0, 255, 0.5));
+  background-image: linear-gradient(rgb(225, 0, 0, 0.5), rgb(0, 0, 225, 0.5));
   box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.5);
   animation: header1to2 1s forwards;
 }
 
 @keyframes header1to2 {
   from {
-    height: 300px;
+    height: 100vh;
   }
   to {
-    height: 100px;
+    height: 75px;
   }
 }
 
 .headerPicture1 {
-  margin-top: 20px;
-  height: 175px;
-  width: 175px;
+  margin-top: 100px;
+  height: 200px;
+  width: 200px;
   border: 2.5px solid rgb(255, 255, 255, 0.25);
   border-radius: 50%;
 }
@@ -45,45 +46,124 @@
   border: 2.5px solid rgb(255, 255, 255, 0.25);
   border-radius: 50%;
   animation: headerPicture1to2 1s forwards;
+  position: relative;
+  z-index: 1;
 }
 
 @keyframes headerPicture1to2 {
   from {
-    margin-top: 20px;
-    height: 175px;
-    width: 175px;
+    margin-top: 100px;
+    height: 200px;
+    width: 200px;
   }
   to {
-    margin-top: 10px;
-    height: 100px;
-    width: 100px;
+    margin-top: 5px;
+    height: 85px;
+    width: 85px;
+  }
+}
+
+.headerSpanTitle2 {
+  color: white;
+  font-size: 16px;
+  margin-top: 30px;
+  vertical-align: top;
+  display: inline-block;
+  animation: headerSpanTitle1to2 2s forwards;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .headerSpanTitle2 {
+    font-size: 14px;
+  }
+}
+
+@keyframes headerSpanTitle1to2 {
+  0% {
+    opacity: 0;
+    width: 0px;
+  }
+  50% {
+    opacity: 0;
+    width: 135px;
+  }
+  100% {
+    opacity: 1;
+    width: 135px;
+  }
+}
+
+.headerSpanDescription2 {
+  color: white;
+  font-size: 16px;
+  margin-top: 30px;
+  vertical-align: top;
+  display: inline-block;
+  animation: headerSpanDescription1to2 2s forwards;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .headerSpanDescription2 {
+    font-size: 14px;
+  }
+}
+
+@keyframes headerSpanDescription1to2 {
+  0% {
+    opacity: 0;
+    width: 0px;
+  }
+  50% {
+    opacity: 0;
+    width: 135px;
+  }
+  100% {
+    opacity: 1;
+    width: 135px;
   }
 }
 
 .headerTitle1 {
-  font-weight: bold;
-  font-size: 30px;
+  font-weight: normal;
+  margin-top: 20px;
+  font-size: 40px;
   color: white;
 }
 
 .headerTitle2 {
-  font-size: 30px;
-  font-weight: bold;
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: normal;
   color: white;
   animation: headerElementExit 1s forwards;
 }
 
 .headerDescription1 {
   font-weight: normal;
-  font-size: 25px;
+  margin-top: 10px;
+  font-size: 30px;
   color: white;
+  animation: headerElementEnter 2s forwards;
 }
 
 .headerDescription2 {
   font-weight: normal;
-  font-size: 25px;
+  margin-top: 10px;
+  font-size: 30px;
   color: white;
   animation: headerElementExit 1s forwards;
+}
+
+@keyframes headerElementEnter {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes headerElementExit {
@@ -97,11 +177,20 @@
 
 .menuElements {
   text-align: center;
-  margin-top: 15px;
+  width: 100%;
+  position: relative;
+  z-index: 0;
   margin-bottom: 20px;
-  margin-right: 10vw;
-  margin-left: 10vw;
-  animation: menuElementsEnter 2s forwards;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(255, 255, 255, 0.75);
+  animation: menuElementsEnter 4s forwards;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .menuElements {
+    padding-bottom: 5px;
+  }
 }
 
 @keyframes menuElementsEnter {
@@ -110,7 +199,7 @@
     position: relative;
     top: 25px;
   }
-  25% {
+  50% {
     opacity: 0;
     position: relative;
     top: 25px;
@@ -131,7 +220,7 @@
     color: rgb(0, 0, 0, 0.75);
   }
   to {
-    color: rgb(150, 0, 255);
+    color: rgb(0, 0, 225, 0.75);
   }
 }
 
@@ -141,7 +230,7 @@
 
 @keyframes menuElementNameHoverOut {
   from {
-    color: rgb(150, 0, 255);
+    color: rgb(0, 0, 225, 0.75);
   }
   to {
     color: rgb(0, 0, 0, 0.75);
@@ -158,7 +247,7 @@
     opacity: 0;
   }
   to {
-    color: rgb(150, 0, 255);
+    color: rgb(0, 0, 225, 0.75);
     opacity: 1;
   }
 }
@@ -169,7 +258,7 @@
 
 @keyframes menuElementUnderscoreDeactivate {
   from {
-    color: rgb(150, 0, 255);
+    color: rgb(0, 0, 225, 0.75);
     opacity: 1;
   }
   to {
@@ -184,8 +273,16 @@
   margin-left: 25vw;
   margin-right: 25vw;
   border-radius: 30px;
-  box-shadow: 0px 0px 15px rgb(125, 0, 255, 0.25);
+  box-shadow: 0px 0px 10px rgb(0, 0, 225, 0.25);
   animation: menuViewBlankToAbout 1s forwards;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .menuViewBlankToAbout {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    animation: menuViewBlankToAboutPortrait 1s forwards;
+  }
 }
 
 @keyframes menuViewBlankToAbout {
@@ -203,12 +300,33 @@
   }
 }
 
+@keyframes menuViewBlankToAboutPortrait {
+  0% {
+    width: 0vw;
+    height: 0px;
+  }
+  50% {
+    width: 0vw;
+    height: 0px;
+  }
+  100% {
+    width: 80vw;
+    height: 350px;
+  }
+}
+
 .menuViewAboutToPortfolio {
   margin-top: 10px;
   margin-bottom: 20px;
   border-radius: 30px;
-  box-shadow: 0px 0px 15px rgb(125, 0, 255, 0.25);
+  box-shadow: 0px 0px 10px rgb(0, 0, 225, 0.25);
   animation: menuViewAboutToPortfolio 1s forwards;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .menuViewAboutToPortfolio {
+    animation: menuViewAboutToPortfolioPortrait 1s forwards;
+  }
 }
 
 @keyframes menuViewAboutToPortfolio {
@@ -232,12 +350,39 @@
   }
 }
 
+@keyframes menuViewAboutToPortfolioPortrait {
+  0% {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+    height: 350px;
+  }
+  50% {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+    height: 350px;
+  }
+  100% {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    height: 1800px;
+  }
+}
+
 .menuViewPortfolioToAbout {
   margin-top: 10px;
   margin-bottom: 20px;
   border-radius: 30px;
-  box-shadow: 0px 0px 15px rgb(125, 0, 255, 0.25);
+  box-shadow: 0px 0px 10px rgb(0, 0, 225, 0.25);
   animation: menuViewPortfolioToAbout 1s forwards;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .menuViewPortfolioToAbout {
+    animation: menuViewPortfolioToAboutPortrait 1s forwards;
+  }
 }
 
 @keyframes menuViewPortfolioToAbout {
@@ -261,12 +406,39 @@
   }
 }
 
+@keyframes menuViewPortfolioToAboutPortrait {
+  0% {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    height: 1800px;
+  }
+  50% {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    height: 1800px;
+  }
+  100% {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+    height: 350px;
+  }
+}
+
 .menuViewAboutToConnect {
   margin-top: 10px;
   margin-bottom: 20px;
   border-radius: 30px;
-  box-shadow: 0px 0px 15px rgb(125, 0, 255, 0.25);
+  box-shadow: 0px 0px 10px rgb(0, 0, 225, 0.25);
   animation: menuViewAboutToConnect 1s forwards;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .menuViewAboutToConnect {
+    animation: menuViewAboutToConnectPortrait 1s forwards;
+  }
 }
 
 @keyframes menuViewAboutToConnect {
@@ -290,12 +462,39 @@
   }
 }
 
+@keyframes menuViewAboutToConnectPortrait {
+  0% {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+    height: 350px;
+  }
+  50% {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+    height: 350px;
+  }
+  100% {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    width: 70vw;
+    height: 225px;
+  }
+}
+
 .menuViewConnectToAbout {
   margin-top: 10px;
   margin-bottom: 20px;
   border-radius: 30px;
-  box-shadow: 0px 0px 15px rgb(125, 0, 255, 0.25);
+  box-shadow: 0px 0px 10px rgb(0, 0, 225, 0.25);
   animation: menuViewConnectToAbout 1s forwards;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .menuViewConnectToAbout {
+    animation: menuViewConnectToAboutPortrait 1s forwards;
+  }
 }
 
 @keyframes menuViewConnectToAbout {
@@ -319,12 +518,39 @@
   }
 }
 
+@keyframes menuViewConnectToAboutPortrait {
+  0% {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    width: 70vw;
+    height: 225px;
+  }
+  50% {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    width: 70vw;
+    height: 225px;
+  }
+  100% {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+    height: 350px;
+  }
+}
+
 .menuViewPortfolioToConnect {
   margin-top: 10px;
   margin-bottom: 20px;
   border-radius: 30px;
-  box-shadow: 0px 0px 15px rgb(125, 0, 255, 0.25);
+  box-shadow: 0px 0px 10px rgb(0, 0, 225, 0.25);
   animation: menuViewPortfolioToConnect 1s forwards;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .menuViewPortfolioToConnect {
+    animation: menuViewPortfolioToConnectPortrait 1s forwards;
+  }
 }
 
 @keyframes menuViewPortfolioToConnect {
@@ -348,12 +574,39 @@
   }
 }
 
+@keyframes menuViewPortfolioToConnectPortrait {
+  0% {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    height: 1800px;
+  }
+  50% {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    height: 1800px;
+  }
+  100% {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    width: 70vw;
+    height: 225px;
+  }
+}
+
 .menuViewConnectToPortfolio {
   margin-top: 10px;
   margin-bottom: 20px;
   border-radius: 30px;
-  box-shadow: 0px 0px 15px rgb(125, 0, 255, 0.25);
+  box-shadow: 0px 0px 10px rgb(0, 0, 225, 0.25);
   animation: menuViewConnectToPortfolio 1s forwards;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .menuViewConnectToPortfolio {
+    animation: menuViewConnectToPortfolioPortrait 1s forwards;
+  }
 }
 
 @keyframes menuViewConnectToPortfolio {
@@ -377,12 +630,39 @@
   }
 }
 
+@keyframes menuViewConnectToPortfolioPortrait {
+  0% {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    width: 70vw;
+    height: 225px;
+  }
+  50% {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    width: 70vw;
+    height: 225px;
+  }
+  100% {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    height: 1800px;
+  }
+}
+
 .menuViewAboutToResume {
   margin-top: 10px;
   margin-bottom: 20px;
   border-radius: 30px;
-  box-shadow: 0px 0px 15px rgb(125, 0, 255, 0.25);
+  box-shadow: 0px 0px 10px rgb(0, 0, 225, 0.25);
   animation: menuViewAboutToResume 1s forwards;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .menuViewAboutToResume {
+    animation: menuViewAboutToResumePortrait 1s forwards;
+  }
 }
 
 @keyframes menuViewAboutToResume {
@@ -406,12 +686,39 @@
   }
 }
 
+@keyframes menuViewAboutToResumePortrait {
+  0% {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+    height: 350px;
+  }
+  50% {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+    height: 350px;
+  }
+  100% {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    height: 1550px;
+  }
+}
+
 .menuViewResumeToAbout {
   margin-top: 10px;
   margin-bottom: 20px;
   border-radius: 30px;
-  box-shadow: 0px 0px 15px rgb(125, 0, 255, 0.25);
+  box-shadow: 0px 0px 10px rgb(0, 0, 225, 0.25);
   animation: menuViewResumeToAbout 1s forwards;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .menuViewResumeToAbout {
+    animation: menuViewResumeToAboutPortrait 1s forwards;
+  }
 }
 
 @keyframes menuViewResumeToAbout {
@@ -435,12 +742,39 @@
   }
 }
 
+@keyframes menuViewResumeToAboutPortrait {
+  0% {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    height: 1550px;
+  }
+  50% {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    height: 1550px;
+  }
+  100% {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+    height: 350px;
+  }
+}
+
 .menuViewResumeToPortfolio {
   margin-top: 10px;
   margin-bottom: 20px;
   border-radius: 30px;
-  box-shadow: 0px 0px 15px rgb(125, 0, 255, 0.25);
+  box-shadow: 0px 0px 10px rgb(0, 0, 225, 0.25);
   animation: menuViewResumeToPortfolio 1s forwards;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .menuViewResumeToPortfolio {
+    animation: menuViewResumeToPortfolioPortrait 1s forwards;
+  }
 }
 
 @keyframes menuViewResumeToPortfolio {
@@ -464,12 +798,39 @@
   }
 }
 
+@keyframes menuViewResumeToPortfolioPortrait {
+  0% {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    height: 1550px;
+  }
+  50% {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    height: 1550px;
+  }
+  100% {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    height: 1800px;
+  }
+}
+
 .menuViewPortfolioToResume {
   margin-top: 10px;
   margin-bottom: 20px;
   border-radius: 30px;
-  box-shadow: 0px 0px 15px rgb(125, 0, 255, 0.25);
+  box-shadow: 0px 0px 10px rgb(0, 0, 225, 0.25);
   animation: menuViewPortfolioToResume 1s forwards;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .menuViewPortfolioToResume {
+    animation: menuViewPortfolioToResumePortrait 1s forwards;
+  }
 }
 
 @keyframes menuViewPortfolioToResume {
@@ -493,12 +854,39 @@
   }
 }
 
+@keyframes menuViewPortfolioToResumePortrait {
+  0% {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    height: 1800px;
+  }
+  50% {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    height: 1800px;
+  }
+  100% {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    height: 1550px;
+  }
+}
+
 .menuViewResumeToConnect {
   margin-top: 10px;
   margin-bottom: 20px;
   border-radius: 30px;
-  box-shadow: 0px 0px 15px rgb(125, 0, 255, 0.25);
+  box-shadow: 0px 0px 10px rgb(0, 0, 225, 0.25);
   animation: menuViewResumeToConnect 1s forwards;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .menuViewResumeToConnect {
+    animation: menuViewResumeToConnectPortrait 1s forwards;
+  }
 }
 
 @keyframes menuViewResumeToConnect {
@@ -522,12 +910,39 @@
   }
 }
 
+@keyframes menuViewResumeToConnectPortrait {
+  0% {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    height: 1550px;
+  }
+  50% {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    height: 1550px;
+  }
+  100% {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    width: 70vw;
+    height: 225px;
+  }
+}
+
 .menuViewConnectToResume {
   margin-top: 10px;
   margin-bottom: 20px;
   border-radius: 30px;
-  box-shadow: 0px 0px 15px rgb(125, 0, 255, 0.25);
+  box-shadow: 0px 0px 10px rgb(0, 0, 225, 0.25);
   animation: menuViewConnectToResume 1s forwards;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .menuViewConnectToResume {
+    animation: menuViewConnectToResumePortrait 1s forwards;
+  }
 }
 
 @keyframes menuViewConnectToResume {
@@ -548,6 +963,27 @@
     margin-right: 15vw;
     width: 70vw;
     height: 1400px;
+  }
+}
+
+@keyframes menuViewConnectToResumePortrait {
+  0% {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    width: 70vw;
+    height: 225px;
+  }
+  50% {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    width: 70vw;
+    height: 225px;
+  }
+  100% {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    height: 1550px;
   }
 }
 
@@ -598,7 +1034,7 @@
     color: black;
   }
   to {
-    color: rgb(125, 0, 255);
+    color: rgb(0, 0, 225, 0.75);
   }
 }
 
@@ -612,7 +1048,7 @@
 
 @keyframes connectIconHoverOut {
   from {
-    color: rgb(125, 0, 255);
+    color: rgb(0, 0, 225, 0.75);
   }
   to {
     color: black;
@@ -621,10 +1057,380 @@
 
 .connectIcons {
   text-align: center;
+  margin-top: 0px;
 }
 
-.resumeText {
-  padding: 30px;
-  font-size: 20px;
+@media (max-aspect-ratio: 13/9) {
+  .connectIcon {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 40px;
+  }
+  .connectIconHoverIn {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 40px;
+  }
+  .connectIconHoverOut {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 40px;
+  }
+  .connectIcons {
+    margin-top: 20px;
+  }
+}
+
+.footer {
   text-align: center;
+  margin-top: 50px;
+  font-size: 14px;
+  color: rgb(0, 0, 0, 0.25);
+  animation: footerEnter 1s forwards;
+}
+
+@keyframes footerEnter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.backgroundAnimations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  animation: backgroundAnimationsEnter 10s forwards;
+}
+
+@keyframes backgroundAnimationsEnter {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.backgroundAnimation1 {
+  position: absolute;
+  background-color: rgb(255, 0, 255, 0.025);
+  z-index: -1;
+  width: 40vw;
+  height: 40vw;
+  border: 1px solid rgb(255, 0, 255, 0.05);
+  border-radius: 50px;
+  animation: backgroundAnimation1 100s infinite;
+}
+
+@keyframes backgroundAnimation1 {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+    top: 0;
+    left: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  50% {
+    top: 70vh;
+    left: 70vw;
+    transform: rotate(180deg);
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+}
+
+.backgroundAnimation2 {
+  position: absolute;
+  background-color: rgb(255, 0, 0, 0.025);
+  z-index: -1;
+  width: 60vw;
+  height: 60vw;
+  border: 1px solid rgb(255, 0, 0, 0.05);
+  border-radius: 50px;
+  animation: backgroundAnimation2 110s infinite;
+}
+
+@keyframes backgroundAnimation2 {
+  0% {
+    opacity: 1;
+    transform: rotate(45deg);
+    top: 50vh;
+    left: 50vw;
+  }
+  25% {
+    opacity: 0.5;
+    transform: rotate(90deg);
+    top: 0vh;
+    left: 0vw;
+  }
+  50% {
+    opacity: 0.75;
+    transform: rotate(135deg);
+    top: -50vh;
+    left: -50vw;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(45deg);
+    top: 50vh;
+    left: 50vw;
+  }
+}
+
+.backgroundAnimation3 {
+  position: absolute;
+  background-color: rgb(0, 0, 255, 0.025);
+  z-index: -1;
+  width: 75vw;
+  height: 75vw;
+  border: 1px solid rgb(0, 0, 255, 0.05);
+  border-radius: 50px;
+  animation: backgroundAnimation3 120s infinite;
+}
+
+@keyframes backgroundAnimation3 {
+  0% {
+    opacity: 0.5;
+    transform: rotate(0deg);
+    top: 50vh;
+    left: -10vw;
+  }
+  25% {
+    opacity: 1;
+    transform: rotate(90deg);
+    top: 0vh;
+    left: 75vw;
+  }
+  50% {
+    opacity: 0.75;
+    transform: rotate(180deg);
+    top: 0vh;
+    left: 50vw;
+  }
+  100% {
+    opacity: 0.5;
+    transform: rotate(0deg);
+    top: 50vh;
+    left: -10vw;
+  }
+}
+
+.backgroundAnimation4 {
+  position: absolute;
+  background-color: rgb(150, 0, 150, 0.025);
+  z-index: -1;
+  width: 100vw;
+  height: 100vw;
+  border: 1px solid rgb(150, 0, 150, 0.05);
+  border-radius: 50px;
+  animation: backgroundAnimation4 130s infinite;
+}
+
+@keyframes backgroundAnimation4 {
+  0% {
+    opacity: 0.5;
+    transform: rotate(45deg);
+    top: 80vh;
+    left: 80vw;
+  }
+  25% {
+    opacity: 1;
+    transform: rotate(75deg);
+    top: -80vh;
+    left: -80vw;
+  }
+  50% {
+    opacity: 0.75;
+    transform: rotate(15deg);
+    top: 0vh;
+    left: 40vw;
+  }
+  100% {
+    opacity: 0.5;
+    transform: rotate(45deg);
+    top: 80vh;
+    left: 80vw;
+  }
+}
+
+.backgroundAnimation5 {
+  position: absolute;
+  background-color: rgb(255, 100, 0, 0.025);
+  z-index: -1;
+  width: 40vw;
+  height: 40vw;
+  border: 1px solid rgb(255, 100, 0, 0.05);
+  border-radius: 50px;
+  animation: backgroundAnimation5 140s infinite;
+}
+
+@keyframes backgroundAnimation5 {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+    top: 0vh;
+    left: 80vw;
+  }
+  20% {
+    opacity: 0.75;
+    transform: rotate(75deg);
+    top: 85vh;
+    left: 0vw;
+  }
+  40% {
+    opacity: 1;
+    transform: rotate(15deg);
+    top: 0vh;
+    left: 0vw;
+  }
+  60% {
+    opacity: 0.5;
+    transform: rotate(45deg);
+    top: 75vh;
+    left: 90vw;
+  }
+  80% {
+    opacity: 0.75;
+    transform: rotate(135deg);
+    top: 80vh;
+    left: 50vw;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+    top: 0vh;
+    left: 80vw;
+  }
+}
+
+.backgroundAnimation6 {
+  position: absolute;
+  background-color: rgb(100, 0, 0, 0.025);
+  z-index: -1;
+  width: 85vw;
+  height: 85vw;
+  border: 1px solid rgb(100, 0, 0, 0.05);
+  border-radius: 50px;
+  animation: backgroundAnimation5 150s infinite;
+}
+
+@keyframes backgroundAnimation6 {
+  0% {
+    opacity: 0;
+    transform: rotate(15deg);
+    top: 40vh;
+    left: 40vw;
+  }
+  20% {
+    opacity: 1;
+    transform: rotate(30deg);
+    top: -20vh;
+    left: -20vw;
+  }
+  40% {
+    opacity: 0.5;
+    transform: rotate(45deg);
+    top: 0vh;
+    left: 20vw;
+  }
+  60% {
+    opacity: 1;
+    transform: rotate(75deg);
+    top: 60vh;
+    left: -10vw;
+  }
+  80% {
+    opacity: 0.75;
+    transform: rotate(55deg);
+    top: 80vh;
+    left: 50vw;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(15deg);
+    top: 40vh;
+    left: 40vw;
+  }
+}
+
+.backgroundAnimation7 {
+  position: absolute;
+  background-color: rgb(0, 255, 200, 0.025);
+  z-index: -1;
+  width: 90vw;
+  height: 90vw;
+  border: 1px solid rgb(0, 255, 200, 0.05);
+  border-radius: 50px;
+  animation: backgroundAnimation7 160s infinite;
+}
+
+@keyframes backgroundAnimation7 {
+  0% {
+    opacity: 0.5;
+    transform: rotate(0deg);
+    top: 0vh;
+    left: -50vw;
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(180deg);
+    top: 10vh;
+    left: -25vw;
+  }
+  100% {
+    opacity: 0.5;
+    transform: rotate(0deg);
+    top: 0vh;
+    left: -50vw;
+  }
+}
+
+.backgroundAnimation8 {
+  position: absolute;
+  background-color: rgb(255, 100, 150, 0.025);
+  z-index: -1;
+  width: 110vw;
+  height: 110vw;
+  border: 1px solid rgb(255, 100, 150, 0.05);
+  border-radius: 50px;
+  animation: backgroundAnimation8 170s infinite;
+}
+
+@keyframes backgroundAnimation8 {
+  0% {
+    opacity: 1;
+    transform: rotate(15deg);
+    top: 100vh;
+    left: 0vw;
+  }
+  50% {
+    opacity: 0.75;
+    transform: rotate(195deg);
+    top: -100vh;
+    left: -25vw;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(375deg);
+    top: 100vh;
+    left: 0vw;
+  }
 }

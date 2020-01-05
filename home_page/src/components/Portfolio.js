@@ -24,11 +24,6 @@ class Portfolio extends React.Component {
     this.setState({ animationTimeout: null });
   };
 
-  style = {
-    padding: "30px",
-    fontSize: "20px"
-  };
-
   render() {
     if (this.state.animationTimeout != null) {
       return null;
@@ -42,7 +37,7 @@ class Portfolio extends React.Component {
 
     return (
       <div className={className}>
-        <div style={this.style}>
+        <div>
           <PortfolioItem
             name="Tic-Tac-Grow"
             description="Original game Tic-Tac-Grow adds an exciting twist to the
@@ -51,6 +46,7 @@ class Portfolio extends React.Component {
               row it takes to win and how big you want the board to grow."
             image={TicTacGrow}
             link="https://neil-solomon.github.io/score_keeper#/TicTacGrow"
+            windowIsLandscape={this.props.windowIsLandscape}
           ></PortfolioItem>
           <PortfolioItem
             name="Scoreboard"
@@ -60,6 +56,7 @@ class Portfolio extends React.Component {
               tedious chore to a fun and exciting part of game night!"
             image={Scoreboard}
             link="https://neil-solomon.github.io/score_keeper#/Scoreboard"
+            windowIsLandscape={this.props.windowIsLandscape}
           ></PortfolioItem>
           <PortfolioItem
             name="Risk Dice Roller"
@@ -69,6 +66,7 @@ class Portfolio extends React.Component {
               and a uniform distribution of dice roll probabilities."
             image={RiskDiceRoller}
             link="https://neil-solomon.github.io/score_keeper#/RiskDiceRoller"
+            windowIsLandscape={this.props.windowIsLandscape}
           ></PortfolioItem>
           <PortfolioItem
             name="Virtual Bank"
@@ -78,6 +76,7 @@ class Portfolio extends React.Component {
             never have to make change or do math again!"
             image={VirtualBank}
             link="https://neil-solomon.github.io/score_keeper#/VirtualBank"
+            windowIsLandscape={this.props.windowIsLandscape}
           ></PortfolioItem>
         </div>
       </div>
