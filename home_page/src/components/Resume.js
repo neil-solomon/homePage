@@ -6,9 +6,12 @@ class Resume extends React.Component {
   };
 
   breakStyle = {
-    marginTop: "30px",
-    borderBottom: "1px solid rgb(0,0,225,.25)"
+    marginTop: "40px",
+    marginBottom: "5px",
+    borderBottom: "1px solid rgb(189, 189, 189)"
   };
+
+  highlightStyle = { color: "#009688" };
 
   componentDidMount() {
     var animationTimeout = setTimeout(() => this.animationTimeout(), 1000);
@@ -57,7 +60,7 @@ class Resume extends React.Component {
     return (
       <div className={className}>
         <div style={textStyle}>
-          <div style={{ color: "rgb(0,0,225,.75)" }}>EDUCATION</div>
+          <div style={this.highlightStyle}>EDUCATION</div>
           <br></br>
           <strong>&emsp;City College of the City University of New York</strong>
           <br></br>
@@ -74,7 +77,7 @@ class Resume extends React.Component {
           <br></br>
           <div style={this.breakStyle}></div>
           <br></br>
-          <div style={{ color: "rgb(0,0,225,.75)" }}>COURSEWORK</div>
+          <div style={this.highlightStyle}>COURSEWORK</div>
           <br></br>
           <strong>Completed</strong>
           <br></br>C++ for Engineers, Programming for EE (C++), Linear Algebra,
@@ -88,7 +91,7 @@ class Resume extends React.Component {
           <br></br>
           <div style={this.breakStyle}></div>
           <br></br>
-          <div style={{ color: "rgb(0,0,225,.75)" }}>EXPERIENCE</div>
+          <div style={this.highlightStyle}>EXPERIENCE</div>
           <br></br>
           <strong>
             GAL Manufacturing <br></br>R&amp;D Software Technician, August
@@ -116,7 +119,7 @@ class Resume extends React.Component {
           control.<br></br>
           <div style={this.breakStyle}></div>
           <br></br>
-          <div style={{ color: "rgb(0,0,225,.75)" }}>AFFILIATIONS</div>
+          <div style={this.highlightStyle}>AFFILIATIONS</div>
           <br></br>
           <strong>National Society of Black Engineers</strong>
           <br></br>

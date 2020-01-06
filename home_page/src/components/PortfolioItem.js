@@ -1,13 +1,14 @@
 import React from "react";
 
 class PortfolioItem extends React.Component {
+  state = { imageClassName: "portfolioImage" };
+
   imageStyle = {
     width: "100%",
     height: "auto",
-    radius: "10%",
     cursor: "pointer",
-    boxShadow: "0px 0px 5px rgb(0,0,0,.2)",
-    borderRadius: "20px"
+    borderRadius: "5px",
+    boxShadow: "0px 2.5px 5px rgb(69, 90, 100, 0.25)"
   };
 
   render() {
@@ -25,12 +26,12 @@ class PortfolioItem extends React.Component {
       };
       headingStyle = {
         fontSize: "20px",
-        color: "rgb(0,0,225,.75)",
+        color: "#009688",
         cursor: "pointer"
       };
       descriptionStyle = {
         fontSize: "20px",
-        color: "rgb(0,0,0,.75)"
+        color: "rgb(33,33,33)"
       };
     } else {
       containerStyle = {
@@ -39,18 +40,18 @@ class PortfolioItem extends React.Component {
         marginTop: "20px",
         marginLeft: "5vw",
         marginRight: "5vw",
-        height: "425px",
+        height: "375px",
         textAlign: "center",
         verticalAlign: "top"
       };
       headingStyle = {
         fontSize: "18px",
-        color: "rgb(0,0,225,.75)",
+        color: "#009688",
         cursor: "pointer"
       };
       descriptionStyle = {
         fontSize: "18px",
-        color: "rgb(0,0,0,.75)"
+        color: "rgb(33,33,33)"
       };
     }
 
@@ -59,6 +60,7 @@ class PortfolioItem extends React.Component {
         <a href={this.props.link} target="blank">
           <img
             style={this.imageStyle}
+            className={this.state.imageClassName}
             src={this.props.image}
             alt={this.props.name}
           ></img>

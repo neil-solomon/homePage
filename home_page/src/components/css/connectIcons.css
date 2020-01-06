@@ -1,0 +1,67 @@
+.connectIcon {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 50px;
+  color: rgb(33, 33, 33);
+  cursor: pointer;
+}
+
+.connectIconHoverIn {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 50px;
+  cursor: pointer;
+  animation: connectIconHoverIn 0.5s forwards;
+}
+
+@keyframes connectIconHoverIn {
+  from {
+    color: rgb(33, 33, 33);
+  }
+  to {
+    color: rgb(0, 150, 136);
+  }
+}
+
+.connectIconHoverOut {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 50px;
+  cursor: pointer;
+  animation: connectIconHoverOut 0.5s forwards;
+}
+
+@keyframes connectIconHoverOut {
+  from {
+    color: rgb(0, 150, 136);
+  }
+  to {
+    color: rgb(33, 33, 33);
+  }
+}
+
+.connectIcons {
+  text-align: center;
+  margin-top: 0px;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .connectIcon {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 40px;
+  }
+  .connectIconHoverIn {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 40px;
+  }
+  .connectIconHoverOut {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 40px;
+  }
+  .connectIcons {
+    margin-top: 20px;
+  }
+}

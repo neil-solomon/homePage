@@ -1,0 +1,91 @@
+.menuElements {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* background-color: rgb(255, 255, 255, 0.75); */
+  background: rgb(207, 216, 220, 0.5);
+  animation: menuElementsEnter 4s forwards;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .menuElements {
+    padding-top: 15px;
+    padding-bottom: 0px;
+  }
+}
+
+@keyframes menuElementsEnter {
+  0% {
+    opacity: 0;
+    position: relative;
+    top: 25px;
+  }
+  50% {
+    opacity: 0;
+    position: relative;
+    top: 25px;
+  }
+  100% {
+    opacity: 1;
+    position: relative;
+    top: 0px;
+  }
+}
+
+.menuElementNameHoverIn {
+  animation: menuElementNameHoverIn 0.5s forwards;
+}
+
+@keyframes menuElementNameHoverIn {
+  from {
+    color: rgb(33, 33, 33);
+  }
+  to {
+    color: #009688;
+    /* color: rgb(100, 75, 225); */
+  }
+}
+
+.menuElementNameHoverOut {
+  animation: menuElementNameHoverOut 0.5s forwards;
+}
+
+@keyframes menuElementNameHoverOut {
+  from {
+    color: #009688;
+    /* color: rgb(100, 75, 225); */
+  }
+  to {
+    color: rgb(33, 33, 33);
+  }
+}
+
+.menuElementUnderscoreActivate {
+  animation: menuElementUnderscoreActivate 1s forwards;
+}
+
+@keyframes menuElementUnderscoreActivate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.menuElementUnderscoreDeactivate {
+  animation: menuElementUnderscoreDeactivate 1s forwards;
+}
+
+@keyframes menuElementUnderscoreDeactivate {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

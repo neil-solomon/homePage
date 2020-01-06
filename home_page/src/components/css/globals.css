@@ -1,0 +1,56 @@
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0px 0px 6px rgb(69, 90, 100, 0.5);
+  background-color: rgb(207, 216, 220, 0.75);
+}
+body::-webkit-scrollbar-thumb {
+  /* background-image: linear-gradient(
+    rgb(69, 90, 100, 0.75),
+    rgb(83, 109, 254, 0.75),
+    rgb(69, 90, 100, 0.75)
+  ); */
+  background: rgb(69, 90, 100, 0.5);
+  border-radius: 10px;
+}
+
+.footer {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 1800px;
+  font-size: 14px;
+  color: rgb(0, 0, 0, 0.25);
+  animation: footerEnter 5s forwards;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .footer {
+    top: 2000px;
+  }
+}
+
+@keyframes footerEnter {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -16,8 +16,7 @@ class MenuElement extends React.Component {
     display: "block",
     textAlign: "center",
     marginTop: "5px",
-    borderBottom: "1px solid rgb(0,0,225,.5)",
-    outline: "none"
+    borderBottom: "1px solid #009688"
   };
 
   hoverIn = () => {

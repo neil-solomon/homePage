@@ -1,0 +1,183 @@
+.header1 {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background-size: 100% 150%;
+  /* background-image: linear-gradient(rgb(69, 90, 100), rgb(83, 109, 254)); */
+  background-image: linear-gradient(rgb(69, 90, 100), #009688);
+  /* background: rgb(69, 90, 100); */
+  box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.5);
+  animation: headerEnter 1s forwards;
+}
+
+@keyframes headerEnter {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.header2 {
+  text-align: center;
+  width: 100vw;
+  /* background-image: linear-gradient(rgb(69, 90, 100), rgb(83, 109, 254)); */
+  background-image: linear-gradient(rgb(69, 90, 100), #009688);
+  /* background: rgb(69, 90, 100); */
+  box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.5);
+  animation: header1to2 1s forwards;
+}
+
+@keyframes header1to2 {
+  from {
+    background-size: 100% 150%;
+    height: 100vh;
+  }
+  to {
+    background-size: 100% 200%;
+    height: 75px;
+  }
+}
+
+.headerPicture1 {
+  margin-top: 100px;
+  height: 200px;
+  width: 200px;
+  border: 2.5px solid rgb(255, 255, 255, 0.25);
+  border-radius: 50%;
+}
+
+.headerPicture2 {
+  border: 2.5px solid rgb(255, 255, 255, 0.25);
+  border-radius: 50%;
+  animation: headerPicture1to2 1s forwards;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes headerPicture1to2 {
+  from {
+    margin-top: 100px;
+    height: 200px;
+    width: 200px;
+  }
+  to {
+    margin-top: 5px;
+    height: 85px;
+    width: 85px;
+  }
+}
+
+.headerSpanTitle2 {
+  color: white;
+  font-size: 16px;
+  margin-top: 30px;
+  vertical-align: top;
+  display: inline-block;
+  animation: headerSpanTitle1to2 2s forwards;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .headerSpanTitle2 {
+    font-size: 14px;
+  }
+}
+
+@keyframes headerSpanTitle1to2 {
+  0% {
+    opacity: 0;
+    width: 0px;
+  }
+  50% {
+    opacity: 0;
+    width: 135px;
+  }
+  100% {
+    opacity: 1;
+    width: 135px;
+  }
+}
+
+.headerSpanDescription2 {
+  color: white;
+  font-size: 16px;
+  margin-top: 30px;
+  vertical-align: top;
+  display: inline-block;
+  animation: headerSpanDescription1to2 2s forwards;
+}
+
+@media (max-aspect-ratio: 13/9) {
+  .headerSpanDescription2 {
+    font-size: 14px;
+  }
+}
+
+@keyframes headerSpanDescription1to2 {
+  0% {
+    opacity: 0;
+    width: 0px;
+  }
+  50% {
+    opacity: 0;
+    width: 135px;
+  }
+  100% {
+    opacity: 1;
+    width: 135px;
+  }
+}
+
+.headerTitle1 {
+  font-weight: normal;
+  margin-top: 20px;
+  font-size: 40px;
+  color: white;
+}
+
+.headerTitle2 {
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: normal;
+  color: white;
+  animation: headerElementExit 1s forwards;
+}
+
+.headerDescription1 {
+  font-weight: normal;
+  margin-top: 10px;
+  font-size: 30px;
+  color: white;
+  animation: headerElementEnter 2s forwards;
+}
+
+.headerDescription2 {
+  font-weight: normal;
+  margin-top: 10px;
+  font-size: 30px;
+  color: white;
+  animation: headerElementExit 1s forwards;
+}
+
+@keyframes headerElementEnter {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes headerElementExit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

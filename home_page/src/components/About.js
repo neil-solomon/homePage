@@ -36,7 +36,7 @@ class About extends React.Component {
         textAlign: "center",
         padding: "30px",
         fontSize: "20px",
-        color: "rgb(0, 0, 0, 0.75)"
+        color: "rgb(33,33,33)"
       };
     } else {
       style = {
@@ -45,7 +45,7 @@ class About extends React.Component {
         paddingRight: "10px",
         paddingTop: "20px",
         fontSize: "18px",
-        color: "rgb(0, 0, 0, 0.75)"
+        color: "rgb(33,33,33)"
       };
     }
 

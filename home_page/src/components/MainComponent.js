@@ -1,5 +1,10 @@
 import React from "react";
-import "./homePage.css";
+import "./css/globals.css";
+import "./css/header.css";
+import "./css/menu.css";
+import "./css/menuViewTransitions.css";
+import "./css/backgroundAnimations.css";
+import "./css/connectIcons.css";
 import MenuElement from "./MenuElement.js";
 import MenuView from "./MenuView.js";
 import myPicture from "./images/wedding1crop2.jpg";
@@ -94,8 +99,9 @@ class MainComponent extends React.Component {
       description = (
         <div className={this.state.headerClassNames[5]}>Software Engineer</div>
       );
-      // footer = <div className="footer">&copy;2019 Neil Solomon</div>;
+      footer = <div className="footer">&copy;2019 Neil Solomon</div>;
     }
+
     return (
       <div>
         <div style={{ zIndex: 1, position: "relative" }}>
@@ -159,6 +165,10 @@ class MainComponent extends React.Component {
           <div className="backgroundAnimation6"></div>
           <div className="backgroundAnimation7"></div>
           <div className="backgroundAnimation8"></div>
+          <div className="backgroundAnimation9"></div>
+          <div className="backgroundAnimation10"></div>
+          <div className="backgroundAnimation11"></div>
+          <div className="backgroundAnimation12"></div>
         </div>
       </div>
     );
