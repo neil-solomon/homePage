@@ -3,9 +3,9 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 1900px;
+  height: 2100px;
   overflow: hidden;
-  animation: backgroundAnimationsEnter 8s forwards;
+  animation: backgroundAnimationsEnter 5s forwards;
 }
 
 @media (max-aspect-ratio: 13/9) {
@@ -18,10 +18,9 @@
   0% {
     opacity: 0;
   }
-  25% {
+  50% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
@@ -29,11 +28,11 @@
 
 .backgroundAnimation1 {
   position: absolute;
-  background-color: rgb(0, 0, 50, 0.025);
+  background-color: rgb(0, 0, 0, 0.025);
   z-index: -1;
   width: 40vw;
   height: 40vw;
-  border: 1px solid rgb(0, 0, 50, 0.05);
+  border: 1px solid rgb(0, 0, 0, 0.05);
   border-radius: 50px;
   animation: backgroundAnimation1 100s infinite;
 }
@@ -73,11 +72,11 @@
 
 .backgroundAnimation2 {
   position: absolute;
-  background-color: rgb(50, 50, 100, 0.025);
+  background-color: rgb(25, 25, 25, 0.025);
   z-index: -1;
   width: 60vw;
   height: 60vw;
-  border: 1px solid rgb(50, 50, 100, 0.05);
+  border: 1px solid rgb(25, 25, 25, 0.05);
   border-radius: 50px;
   animation: backgroundAnimation2 110s infinite;
 }
@@ -118,11 +117,11 @@
 
 .backgroundAnimation3 {
   position: absolute;
-  background-color: rgb(100, 200, 150, 0.025);
+  background-color: rgb(50, 50, 50, 0.025);
   z-index: -1;
   width: 75vw;
   height: 75vw;
-  border: 1px solid rgb(100, 200, 150, 0.05);
+  border: 1px solid rgb(50, 50, 50, 0.05);
   border-radius: 50px;
   animation: backgroundAnimation3 120s infinite;
 }
@@ -163,11 +162,11 @@
 
 .backgroundAnimation4 {
   position: absolute;
-  background-color: rgb(150, 150, 100, 0.025);
+  background-color: rgb(75, 75, 75, 0.025);
   z-index: -1;
   width: 100vw;
   height: 100vw;
-  border: 1px solid rgb(150, 150, 100, 0.05);
+  border: 1px solid rgb(75, 75, 75, 0.05);
   border-radius: 50px;
   animation: backgroundAnimation4 130s infinite;
 }
@@ -208,11 +207,11 @@
 
 .backgroundAnimation5 {
   position: absolute;
-  background-color: rgb(200, 200, 250, 0.025);
+  background-color: rgb(100, 100, 100, 0.025);
   z-index: -1;
   width: 50vw;
   height: 50vw;
-  border: 1px solid rgb(200, 200, 250, 0.05);
+  border: 1px solid rgb(100, 100, 100, 0.05);
   border-radius: 50px;
   animation: backgroundAnimation5 140s infinite;
 }
@@ -265,11 +264,11 @@
 
 .backgroundAnimation6 {
   position: absolute;
-  background-color: rgb(100, 200, 50, 0.025);
+  background-color: rgb(0, 150, 136, 0.025);
   z-index: -1;
   width: 85vw;
   height: 85vw;
-  border: 1px solid rgb(100, 200, 50, 0.05);
+  border: 1px solid rgb(0, 150, 136, 0.05);
   border-radius: 50px;
   animation: backgroundAnimation5 150s infinite;
 }
@@ -322,11 +321,11 @@
 
 .backgroundAnimation7 {
   position: absolute;
-  background-color: rgb(0, 150, 125, 0.025);
+  background-color: rgb(0, 0, 0, 0.025);
   z-index: -1;
   width: 90vw;
   height: 90vw;
-  border: 1px solid rgb(0, 150, 125, 0.05);
+  border: 1px solid rgb(0, 0, 0, 0.05);
   border-radius: 50px;
   animation: backgroundAnimation7 160s infinite;
 }
@@ -361,11 +360,11 @@
 
 .backgroundAnimation8 {
   position: absolute;
-  background-color: rgb(0, 0, 127, 0.025);
+  background-color: rgb(25, 25, 25, 0.025);
   z-index: -1;
   width: 110vw;
   height: 110vw;
-  border: 1px solid rgb(0, 0, 127, 0.05);
+  border: 1px solid rgb(25, 25, 25, 0.05);
   border-radius: 50px;
   animation: backgroundAnimation8 170s infinite;
 }
@@ -400,11 +399,11 @@
 
 .backgroundAnimation9 {
   position: absolute;
-  background-color: rgb(0, 0, 255, 0.025);
+  background-color: rgb(50, 50, 50, 0.025);
   z-index: -1;
   width: 80vw;
   height: 80vw;
-  border: 1px solid rgb(0, 0, 255, 0.05);
+  border: 1px solid rgb(50, 50, 50, 0.05);
   border-radius: 50px;
   animation: backgroundAnimation9 170s infinite;
 }
@@ -439,11 +438,11 @@
 
 .backgroundAnimation10 {
   position: absolute;
-  background-color: rgb(50, 255, 50, 0.025);
+  background-color: rgb(75, 75, 75, 0.025);
   z-index: -1;
   width: 90vw;
   height: 90vw;
-  border: 1px solid rgb(50, 255, 50, 0.05);
+  border: 1px solid rgb(75, 75, 75, 0.05);
   border-radius: 50px;
   animation: backgroundAnimation10 170s infinite;
 }
@@ -478,11 +477,11 @@
 
 .backgroundAnimation11 {
   position: absolute;
-  background-color: rgb(150, 150, 200, 0.025);
+  background-color: rgb(100, 100, 100, 0.025);
   z-index: -1;
   width: 70vw;
   height: 70vw;
-  border: 1px solid rgb(150, 150, 200, 0.05);
+  border: 1px solid rgb(100, 100, 100, 0.05);
   border-radius: 50px;
   animation: backgroundAnimation11 170s infinite;
 }
@@ -517,11 +516,11 @@
 
 .backgroundAnimation12 {
   position: absolute;
-  background-color: rgb(100, 200, 255, 0.025);
+  background-color: rgb(0, 150, 136, 0.025);
   z-index: -1;
   width: 100vw;
   height: 100vw;
-  border: 1px solid rgb(100, 200, 255, 0.05);
+  border: 1px solid rgb(0, 150, 136, 0.05);
   border-radius: 50px;
   animation: backgroundAnimation12 170s infinite;
 }

@@ -14,7 +14,9 @@ class MenuView extends React.Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.activeMenu !== this.props.activeMenu) {
-      var className, activeMenuId;
+      var className,
+        activeMenuId,
+        timeout = 250;
       if (
         !prevProps.activeMenu[0] &&
         !prevProps.activeMenu[1] &&
@@ -23,6 +25,7 @@ class MenuView extends React.Component {
       ) {
         className = "menuViewBlankToAbout";
         activeMenuId = 0;
+        timeout = 500;
       } else if (prevProps.activeMenu[0] && this.props.activeMenu[1]) {
         className = "menuViewAboutToPortfolio";
         activeMenuId = 1;
@@ -62,7 +65,7 @@ class MenuView extends React.Component {
       }
       var setActiveMenuTimeout = setTimeout(
         () => this.setActiveMenu(activeMenuId),
-        250
+        timeout
       );
       this.setState({ setActiveMenuTimeout });
       this.setState({ className });

@@ -5,6 +5,7 @@ import "./css/menu.css";
 import "./css/menuViewTransitions.css";
 import "./css/backgroundAnimations.css";
 import "./css/connectIcons.css";
+import "./css/resume.css";
 import MenuElement from "./MenuElement.js";
 import MenuView from "./MenuView.js";
 import myPicture from "./images/wedding1crop2.jpg";
@@ -28,8 +29,8 @@ class MainComponent extends React.Component {
   };
 
   componentDidMount() {
-    var activateMenuTimeout = setTimeout(() => this.toggleMenus(0), 2500);
-    var changeHeaderTimeout = setTimeout(() => this.changeHeaderStyles(), 2400);
+    var activateMenuTimeout = setTimeout(() => this.toggleMenus(0), 2250);
+    var changeHeaderTimeout = setTimeout(() => this.changeHeaderStyles(), 2200);
     window.addEventListener("resize", this.windowResize);
     this.setState({
       windowIsLandscape: window.innerWidth > window.innerHeight
@@ -66,7 +67,11 @@ class MainComponent extends React.Component {
   };
 
   toggleMenus = menuId => {
-    if (this.state.menusAnimatingTimeout || this.state.initialAnimation) {
+    if (
+      this.state.menusAnimatingTimeout ||
+      this.state.initialAnimation ||
+      this.state.activeMenu[menuId]
+    ) {
       return;
     }
     var activeMenu = [];

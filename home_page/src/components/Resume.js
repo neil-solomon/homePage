@@ -1,8 +1,19 @@
 import React from "react";
+import { Icon } from "antd";
+import resumePdf from "./images/NeilSolomon_Jan2020.pdf";
 
 class Resume extends React.Component {
   state = {
-    animationTimeout: null
+    animationTimeout: null,
+    downloadClassName: "resumeDownloadHoverOut"
+  };
+
+  downloadStyle = {
+    cursor: "pointer",
+    width: "30%",
+    height: "50px",
+    marginLeft: "auto",
+    marginRight: "auto"
   };
 
   breakStyle = {
@@ -27,6 +38,14 @@ class Resume extends React.Component {
     this.setState({ animationTimeout: null });
   };
 
+  toggleDownloadHover = () => {
+    if (this.state.downloadClassName === "resumeDownloadHoverIn") {
+      this.setState({ downloadClassName: "resumeDownloadHoverOut" });
+    } else {
+      this.setState({ downloadClassName: "resumeDownloadHoverIn" });
+    }
+  };
+
   render() {
     if (this.state.animationTimeout != null) {
       return null;
@@ -41,15 +60,17 @@ class Resume extends React.Component {
     var textStyle;
     if (this.props.windowIsLandscape) {
       textStyle = {
-        padding: "30px",
+        paddingLeft: "20px",
+        paddingRight: "20px",
         fontSize: "20px",
+        paddingTop: "40px",
         textAlign: "center",
         color: "rgb(0,0,0,.75)"
       };
     } else {
       textStyle = {
-        paddingLeft: "10px",
-        paddingRight: "10px",
+        paddingLeft: "5px",
+        paddingRight: "5px",
         paddingTop: "20px",
         fontSize: "16px",
         textAlign: "center",
@@ -129,6 +150,21 @@ class Resume extends React.Component {
           <strong>Institute of Electronics and Electrical Engineers</strong>
           <br></br>
           Member, 2017-present.
+          <div style={this.breakStyle}></div>
+          <div style={{ height: "50px" }}></div>
+          <div style={this.downloadStyle}>
+            <div
+              onMouseEnter={this.toggleDownloadHover}
+              onMouseLeave={this.toggleDownloadHover}
+              onClick={this.downloadResume}
+              className={this.state.downloadClassName}
+            >
+              <a href={resumePdf} download>
+                Download PDF
+                <Icon type="download"></Icon>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     );

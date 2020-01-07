@@ -2,7 +2,7 @@
   text-align: center;
   width: 100vw;
   height: 100vh;
-  background-size: 100% 150%;
+  background-size: 100% 200%;
   /* background-image: linear-gradient(rgb(69, 90, 100), rgb(83, 109, 254)); */
   background-image: linear-gradient(rgb(69, 90, 100), #009688);
   /* background: rgb(69, 90, 100); */
@@ -32,11 +32,11 @@
 
 @keyframes header1to2 {
   from {
-    background-size: 100% 150%;
+    background-size: 100% 200%;
     height: 100vh;
   }
   to {
-    background-size: 100% 200%;
+    background-size: 100% 300%;
     height: 75px;
   }
 }

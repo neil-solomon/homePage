@@ -36,10 +36,10 @@ class PortfolioItem extends React.Component {
     } else {
       containerStyle = {
         display: "inline-block",
-        width: "80vw",
+        width: "90vw",
         marginTop: "20px",
-        marginLeft: "5vw",
-        marginRight: "5vw",
+        marginLeft: "2.5vw",
+        marginRight: "2.5vw",
         height: "375px",
         textAlign: "center",
         verticalAlign: "top"

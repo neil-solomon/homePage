@@ -1,0 +1,25 @@
+.resumeDownloadHoverOut {
+  animation: resumeDownloadHoverOut 1s forwards;
+}
+
+@keyframes resumeDownloadHoverOut {
+  from {
+    color: rgb(33, 33, 33);
+  }
+  to {
+    color: rgb(150, 150, 150);
+  }
+}
+
+.resumeDownloadHoverIn {
+  animation: resumeDownloadHoverIn 1s forwards;
+}
+
+@keyframes resumeDownloadHoverIn {
+  from {
+    color: rgb(150, 150, 150);
+  }
+  to {
+    color: rgb(33, 33, 33);
+  }
+}

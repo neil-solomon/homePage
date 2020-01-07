@@ -31,7 +31,7 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   width: 100%;
   position: absolute;
-  top: 1800px;
+  top: 2050px;
   font-size: 14px;
   color: rgb(0, 0, 0, 0.25);
   animation: footerEnter 5s forwards;

@@ -12,7 +12,6 @@ class MenuElement extends React.Component {
   }
 
   underscoreStyle = {
-    cursor: "pointer",
     display: "block",
     textAlign: "center",
     marginTop: "5px",
