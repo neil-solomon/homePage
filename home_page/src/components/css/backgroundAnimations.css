@@ -22,7 +22,7 @@
     opacity: 0;
   }
   100% {
-    opacity: 1;
+    opacity: 0.75;
   }
 }
 
@@ -46,27 +46,22 @@
 
 @keyframes backgroundAnimation1 {
   0% {
-    opacity: 0;
-    transform: rotate(0deg);
-    top: 0;
-    left: 0;
-  }
-  5% {
     opacity: 1;
+    transform: rotate(0deg);
+    top: -20vh;
+    left: -20vw;
   }
   50% {
-    top: 70vh;
-    left: 70vw;
+    opacity: 0.5;
+    top: 50vh;
+    left: 50vw;
     transform: rotate(180deg);
-  }
-  95% {
-    opacity: 1;
   }
   100% {
     transform: rotate(360deg);
-    top: 0;
-    left: 0;
-    opacity: 0;
+    top: -20vh;
+    left: -20vw;
+    opacity: 1;
   }
 }
 
@@ -228,7 +223,7 @@
     opacity: 1;
     transform: rotate(0deg);
     top: 0vh;
-    left: 80vw;
+    left: 40vw;
   }
   20% {
     opacity: 0.75;
@@ -258,7 +253,7 @@
     opacity: 1;
     transform: rotate(0deg);
     top: 0vh;
-    left: 80vw;
+    left: 40vw;
   }
 }
 
@@ -384,7 +379,7 @@
     left: 0vw;
   }
   50% {
-    opacity: 0.75;
+    opacity: 0.5;
     transform: rotate(195deg);
     top: -100vh;
     left: -25vw;
@@ -417,7 +412,7 @@
 
 @keyframes backgroundAnimation9 {
   0% {
-    opacity: 0.75;
+    opacity: 0.5;
     transform: rotate(15deg);
     top: 100vh;
     left: -20vw;
@@ -429,7 +424,7 @@
     left: 20vw;
   }
   100% {
-    opacity: 0.75;
+    opacity: 0.5;
     transform: rotate(375deg);
     top: 100vh;
     left: -20vw;
@@ -459,19 +454,19 @@
     opacity: 1;
     transform: rotate(30deg);
     top: 150vh;
-    left: 80vw;
+    left: 60vw;
   }
   50% {
     opacity: 0.5;
     transform: rotate(210deg);
     top: 250vh;
-    left: 40vw;
+    left: 20vw;
   }
   100% {
     opacity: 1;
     transform: rotate(30deg);
     top: 150vh;
-    left: 80vw;
+    left: 60vw;
   }
 }
 
@@ -495,10 +490,10 @@
 
 @keyframes backgroundAnimation11 {
   0% {
-    opacity: 0.75;
+    opacity: 0.5;
     transform: rotate(45deg);
     top: 300vh;
-    left: 40vw;
+    left: 10vw;
   }
   50% {
     opacity: 1;
@@ -507,10 +502,10 @@
     left: 40vw;
   }
   100% {
-    opacity: 0.75;
+    opacity: 0.5;
     transform: rotate(45deg);
     top: 300vh;
-    left: 80vw;
+    left: 10vw;
   }
 }
 
@@ -540,10 +535,10 @@
     left: -40vw;
   }
   50% {
-    opacity: 0.75;
+    opacity: 0.5;
     transform: rotate(-45deg);
     top: 200vh;
-    left: -40vw;
+    left: -60vw;
   }
   100% {
     opacity: 1;

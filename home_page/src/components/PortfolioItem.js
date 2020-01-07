@@ -3,16 +3,8 @@ import React from "react";
 class PortfolioItem extends React.Component {
   state = { imageClassName: "portfolioImage" };
 
-  imageStyle = {
-    width: "100%",
-    height: "auto",
-    cursor: "pointer",
-    borderRadius: "5px",
-    boxShadow: "0px 2.5px 5px rgb(69, 90, 100, 0.25)"
-  };
-
   render() {
-    var containerStyle, headingStyle, descriptionStyle;
+    var containerStyle, headingStyle, descriptionStyle, imageStyle;
     if (this.props.windowIsLandscape) {
       containerStyle = {
         display: "inline-block",
@@ -23,6 +15,13 @@ class PortfolioItem extends React.Component {
         height: "425px",
         textAlign: "center",
         verticalAlign: "top"
+      };
+      imageStyle = {
+        width: "100%",
+        height: "auto",
+        cursor: "pointer",
+        borderRadius: "5px",
+        boxShadow: "0px 2.5px 5px rgb(69, 90, 100, 0.25)"
       };
       headingStyle = {
         fontSize: "20px",
@@ -44,6 +43,15 @@ class PortfolioItem extends React.Component {
         textAlign: "center",
         verticalAlign: "top"
       };
+      imageStyle = {
+        width: "90%",
+        marginLeft: "auto",
+        marginRight: "auto",
+        height: "auto",
+        cursor: "pointer",
+        borderRadius: "5px",
+        boxShadow: "0px 2.5px 5px rgb(69, 90, 100, 0.25)"
+      };
       headingStyle = {
         fontSize: "18px",
         color: "#009688",
@@ -59,7 +67,7 @@ class PortfolioItem extends React.Component {
       <div style={containerStyle}>
         <a href={this.props.link} target="blank">
           <img
-            style={this.imageStyle}
+            style={imageStyle}
             className={this.state.imageClassName}
             src={this.props.image}
             alt={this.props.name}

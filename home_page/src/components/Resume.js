@@ -16,12 +16,6 @@ class Resume extends React.Component {
     marginRight: "auto"
   };
 
-  breakStyle = {
-    marginTop: "40px",
-    marginBottom: "5px",
-    borderBottom: "1px solid rgb(189, 189, 189)"
-  };
-
   highlightStyle = { color: "#009688" };
 
   componentDidMount() {
@@ -57,8 +51,16 @@ class Resume extends React.Component {
       className = "menuContentTransitionIn";
     }
 
-    var textStyle;
+    var textStyle, breakStyle;
     if (this.props.windowIsLandscape) {
+      breakStyle = {
+        marginTop: "40px",
+        marginBottom: "5px",
+        width: "90%",
+        marginLeft: "auto",
+        marginRight: "auto",
+        borderBottom: "1px solid rgb(189, 189, 189)"
+      };
       textStyle = {
         paddingLeft: "20px",
         paddingRight: "20px",
@@ -68,6 +70,14 @@ class Resume extends React.Component {
         color: "rgb(0,0,0,.75)"
       };
     } else {
+      breakStyle = {
+        marginTop: "40px",
+        marginBottom: "5px",
+        width: "80%",
+        marginLeft: "auto",
+        marginRight: "auto",
+        borderBottom: "1px solid rgb(189, 189, 189)"
+      };
       textStyle = {
         paddingLeft: "5px",
         paddingRight: "5px",
@@ -96,7 +106,7 @@ class Resume extends React.Component {
           &emsp;Associate in Science, Electrical Engineering: June 2018. GPA:
           3.7
           <br></br>
-          <div style={this.breakStyle}></div>
+          <div style={breakStyle}></div>
           <br></br>
           <div style={this.highlightStyle}>COURSEWORK</div>
           <br></br>
@@ -110,7 +120,7 @@ class Resume extends React.Component {
           <br></br>Data Structures, Algorithms, Assembly Language, Operating
           Systems, Software Design
           <br></br>
-          <div style={this.breakStyle}></div>
+          <div style={breakStyle}></div>
           <br></br>
           <div style={this.highlightStyle}>EXPERIENCE</div>
           <br></br>
@@ -138,7 +148,7 @@ class Resume extends React.Component {
           controller. Assisted in documentation of software team processes
           including GALaxy simulator set-up and testing, and software version
           control.<br></br>
-          <div style={this.breakStyle}></div>
+          <div style={breakStyle}></div>
           <br></br>
           <div style={this.highlightStyle}>AFFILIATIONS</div>
           <br></br>
@@ -150,7 +160,7 @@ class Resume extends React.Component {
           <strong>Institute of Electronics and Electrical Engineers</strong>
           <br></br>
           Member, 2017-present.
-          <div style={this.breakStyle}></div>
+          <div style={breakStyle}></div>
           <div style={{ height: "50px" }}></div>
           <div style={this.downloadStyle}>
             <div
