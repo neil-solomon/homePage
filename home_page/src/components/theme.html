@@ -1,0 +1,575 @@
+<html>
+    <style>
+        body{
+          background-image: linear-gradient(rgb(69, 90, 100), rgb(0,150,146));
+          background-size: 100% 200%;
+        }
+
+        .backgroundAnimations {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            animation: backgroundAnimationsEnter 1s forwards;
+        }
+
+        @media (max-aspect-ratio: 13/9) {
+            .backgroundAnimations {
+                height: 2100px;
+            }
+        }
+
+        @keyframes backgroundAnimationsEnter {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0.75;
+            }
+        }
+        .backgroundAnimation1 {
+            position: absolute;
+            background-color: rgb(0, 0, 0, 0.025);
+            /* z-index: -1; */ 
+            width: 40vw;
+            height: 40vw;
+            border: 1px solid rgb(0, 0, 0, .25);
+            border-radius: 50px;
+            animation: backgroundAnimation1 100s infinite;
+        }
+
+        @media (max-aspect-ratio: 13/9) {
+            .backgroundAnimation1 {
+                width: 40vh;
+                height: 40vh;
+            }
+        }
+
+        @keyframes backgroundAnimation1 {
+            0% {
+                opacity: 1;
+                transform: rotate(0deg);
+                top: -20vh;
+                left: -20vw;
+            }
+            50% {
+                opacity: 0.5;
+                top: 50vh;
+                left: 50vw;
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(360deg);
+                top: -20vh;
+                left: -20vw;
+                opacity: 1;
+            }
+        }
+
+        .backgroundAnimation2 {
+            position: absolute;
+            background-color: rgb(25, 25, 25, 0.025);
+            /* z-index: -1; */
+            width: 60vw;
+            height: 60vw;
+            border: 1px solid rgb(25, 25, 25, .25);
+            border-radius: 50px;
+            animation: backgroundAnimation2 110s infinite;
+        }
+
+        @media (max-aspect-ratio: 13/9) {
+            .backgroundAnimation2 {
+                width: 60vh;
+                height: 60vh;
+            }
+        }
+
+        @keyframes backgroundAnimation2 {
+            0% {
+                opacity: 1;
+                transform: rotate(45deg);
+                top: 50vh;
+                left: 50vw;
+            }
+            25% {
+                opacity: 0.5;
+                transform: rotate(90deg);
+                top: 0vh;
+                left: 0vw;
+            }
+            50% {
+                opacity: 0.75;
+                transform: rotate(135deg);
+                top: -50vh;
+                left: -50vw;
+            }
+            100% {
+                opacity: 1;
+                transform: rotate(45deg);
+                top: 50vh;
+                left: 50vw;
+            }
+        }
+
+        .backgroundAnimation3 {
+            position: absolute;
+            background-color: rgb(50, 50, 50, 0.025);
+            /* z-index: -1; */
+            width: 75vw;
+            height: 75vw;
+            border: 1px solid rgb(50, 50, 50, .25);
+            border-radius: 50px;
+            animation: backgroundAnimation3 120s infinite;
+        }
+
+        @media (max-aspect-ratio: 13/9) {
+            .backgroundAnimation3 {
+                width: 75vh;
+                height: 75vh;
+            }
+        }
+
+        @keyframes backgroundAnimation3 {
+            0% {
+                opacity: 0.5;
+                transform: rotate(0deg);
+                top: 50vh;
+                left: -10vw;
+            }
+            25% {
+                opacity: 1;
+                transform: rotate(90deg);
+                top: 0vh;
+                left: 75vw;
+            }
+            50% {
+                opacity: 0.75;
+                transform: rotate(180deg);
+                top: 0vh;
+                left: 50vw;
+            }
+            100% {
+                opacity: 0.5;
+                transform: rotate(0deg);
+                top: 50vh;
+                left: -10vw;
+            }
+        }
+
+        .backgroundAnimation4 {
+            position: absolute;
+            background-color: rgb(75, 75, 75, 0.025);
+            /* z-index: -1; */
+            width: 100vw;
+            height: 100vw;
+            border: 1px solid rgb(75, 75, 75, .25);
+            border-radius: 50px;
+            animation: backgroundAnimation4 130s infinite;
+        }
+
+        @media (max-aspect-ratio: 13/9) {
+            .backgroundAnimation4 {
+                width: 100vh;
+                height: 100vh;
+            }
+        }
+
+        @keyframes backgroundAnimation4 {
+            0% {
+                opacity: 0.5;
+                transform: rotate(45deg);
+                top: 80vh;
+                left: 80vw;
+            }
+            25% {
+                opacity: 1;
+                transform: rotate(75deg);
+                top: -80vh;
+                left: -80vw;
+            }
+            50% {
+                opacity: 0.75;
+                transform: rotate(15deg);
+                top: 0vh;
+                left: 40vw;
+            }
+            100% {
+                opacity: 0.5;
+                transform: rotate(45deg);
+                top: 80vh;
+                left: 80vw;
+            }
+        }
+
+        .backgroundAnimation5 {
+            position: absolute;
+            background-color: rgb(100, 100, 100, 0.025);
+            /* z-index: -1; */
+            width: 50vw;
+            height: 50vw;
+            border: 1px solid rgb(100, 100, 100, .25);
+            border-radius: 50px;
+            animation: backgroundAnimation5 140s infinite;
+        }
+
+        @media (max-aspect-ratio: 13/9) {
+            .backgroundAnimation5 {
+                width: 50vh;
+                height: 50vh;
+            }
+        }
+
+        @keyframes backgroundAnimation5 {
+            0% {
+                opacity: 1;
+                transform: rotate(0deg);
+                top: 0vh;
+                left: 40vw;
+            }
+            20% {
+                opacity: 0.75;
+                transform: rotate(75deg);
+                top: 85vh;
+                left: 0vw;
+            }
+            40% {
+                opacity: 1;
+                transform: rotate(15deg);
+                top: 0vh;
+                left: 0vw;
+            }
+            60% {
+                opacity: 0.5;
+                transform: rotate(45deg);
+                top: 75vh;
+                left: 90vw;
+            }
+            80% {
+                opacity: 0.75;
+                transform: rotate(135deg);
+                top: 80vh;
+                left: 50vw;
+            }
+            100% {
+                opacity: 1;
+                transform: rotate(0deg);
+                top: 0vh;
+                left: 40vw;
+            }
+        }
+
+        .backgroundAnimation6 {
+            position: absolute;
+            background-color: rgb(0, 150, 136, 0.025);
+            /* z-index: -1; */
+            width: 85vw;
+            height: 85vw;
+            border: 1px solid rgb(0, 150, 136, .25);
+            border-radius: 50px;
+            animation: backgroundAnimation5 150s infinite;
+        }
+
+        @media (max-aspect-ratio: 13/9) {
+            .backgroundAnimation6 {
+                width: 85vh;
+                height: 85vh;
+            }
+        }
+
+        @keyframes backgroundAnimation6 {
+            0% {
+                opacity: 0;
+                transform: rotate(15deg);
+                top: 40vh;
+                left: 40vw;
+            }
+            20% {
+                opacity: 1;
+                transform: rotate(30deg);
+                top: -20vh;
+                left: -20vw;
+            }
+            40% {
+                opacity: 0.5;
+                transform: rotate(45deg);
+                top: 0vh;
+                left: 20vw;
+            }
+            60% {
+                opacity: 1;
+                transform: rotate(75deg);
+                top: 60vh;
+                left: -10vw;
+            }
+            80% {
+                opacity: 0.75;
+                transform: rotate(55deg);
+                top: 80vh;
+                left: 50vw;
+            }
+            100% {
+                opacity: 0;
+                transform: rotate(15deg);
+                top: 40vh;
+                left: 40vw;
+            }
+        }
+
+        .backgroundAnimation7 {
+            position: absolute;
+            background-color: rgb(0, 0, 0, 0.025);
+            /* z-index: -1; */
+            width: 90vw;
+            height: 90vw;
+            border: 1px solid rgb(0, 0, 0, .25);
+            border-radius: 50px;
+            animation: backgroundAnimation7 160s infinite;
+        }
+
+        @media (max-aspect-ratio: 13/9) {
+            .backgroundAnimation7 {
+                width: 90vh;
+                height: 90vh;
+            }
+        }
+
+        @keyframes backgroundAnimation7 {
+            0% {
+                opacity: 0.5;
+                transform: rotate(0deg);
+                top: 0vh;
+                left: -50vw;
+            }
+            50% {
+                opacity: 1;
+                transform: rotate(180deg);
+                top: 10vh;
+                left: -25vw;
+            }
+            100% {
+                opacity: 0.5;
+                transform: rotate(0deg);
+                top: 0vh;
+                left: -50vw;
+            }
+        }
+
+        .backgroundAnimation8 {
+            position: absolute;
+            background-color: rgb(25, 25, 25, 0.025);
+            /* z-index: -1; */
+            width: 110vw;
+            height: 110vw;
+            border: 1px solid rgb(25, 25, 25, .25);
+            border-radius: 50px;
+            animation: backgroundAnimation8 170s infinite;
+        }
+
+        @media (max-aspect-ratio: 13/9) {
+            .backgroundAnimation8 {
+                width: 110vh;
+                height: 110vh;
+            }
+        }
+
+        @keyframes backgroundAnimation8 {
+            0% {
+                opacity: 1;
+                transform: rotate(15deg);
+                top: 100vh;
+                left: 0vw;
+            }
+            50% {
+                opacity: 0.5;
+                transform: rotate(195deg);
+                top: -100vh;
+                left: -25vw;
+            }
+            100% {
+                opacity: 1;
+                transform: rotate(375deg);
+                top: 100vh;
+                left: 0vw;
+            }
+        }
+
+        .backgroundAnimation9 {
+            position: absolute;
+            background-color: rgb(50, 50, 50, 0.025);
+            /* z-index: -1; */
+            width: 80vw;
+            height: 80vw;
+            border: 1px solid rgb(50, 50, 50, .25);
+            border-radius: 50px;
+            animation: backgroundAnimation9 170s infinite;
+        }
+
+        @media (max-aspect-ratio: 13/9) {
+            .backgroundAnimation9 {
+                width: 80vh;
+                height: 80vh;
+            }
+        }
+
+        @keyframes backgroundAnimation9 {
+            0% {
+                opacity: 0.5;
+                transform: rotate(15deg);
+                top: 100vh;
+                left: -20vw;
+            }
+            50% {
+                opacity: 1;
+                transform: rotate(195deg);
+                top: 300vh;
+                left: 20vw;
+            }
+            100% {
+                opacity: 0.5;
+                transform: rotate(375deg);
+                top: 100vh;
+                left: -20vw;
+            }
+        }
+
+        .backgroundAnimation10 {
+            position: absolute;
+            background-color: rgb(75, 75, 75, 0.025);
+            /* z-index: -1; */
+            width: 90vw;
+            height: 90vw;
+            border: 1px solid rgb(75, 75, 75, .25);
+            border-radius: 50px;
+            animation: backgroundAnimation10 170s infinite;
+        }
+
+        @media (max-aspect-ratio: 13/9) {
+            .backgroundAnimation10 {
+                width: 90vh;
+                height: 90vh;
+            }
+        }
+
+        @keyframes backgroundAnimation10 {
+            0% {
+                opacity: 1;
+                transform: rotate(30deg);
+                top: 150vh;
+                left: 60vw;
+            }
+            50% {
+                opacity: 0.5;
+                transform: rotate(210deg);
+                top: 250vh;
+                left: 20vw;
+            }
+            100% {
+                opacity: 1;
+                transform: rotate(30deg);
+                top: 150vh;
+                left: 60vw;
+            }
+        }
+
+        .backgroundAnimation11 {
+            position: absolute;
+            background-color: rgb(100, 100, 100, 0.025);
+            /* z-index: -1; */
+            width: 70vw;
+            height: 70vw;
+            border: 1px solid rgb(100, 100, 100, .25);
+            border-radius: 50px;
+            animation: backgroundAnimation11 170s infinite;
+        }
+
+        @media (max-aspect-ratio: 13/9) {
+            .backgroundAnimation11 {
+                width: 70vh;
+                height: 70vh;
+            }
+        }
+
+        @keyframes backgroundAnimation11 {
+            0% {
+                opacity: 0.5;
+                transform: rotate(45deg);
+                top: 300vh;
+                left: 10vw;
+            }
+            50% {
+                opacity: 1;
+                transform: rotate(115deg);
+                top: 150vh;
+                left: 40vw;
+            }
+            100% {
+                opacity: 0.5;
+                transform: rotate(45deg);
+                top: 300vh;
+                left: 10vw;
+            }
+        }
+
+        .backgroundAnimation12 {
+            position: absolute;
+            background-color: rgb(0, 150, 136, 0.025);
+            /* z-index: -1; */
+            width: 100vw;
+            height: 100vw;
+            border: 1px solid rgb(0, 150, 136, .25);
+            border-radius: 50px;
+            animation: backgroundAnimation12 170s infinite;
+        }
+
+        @media (max-aspect-ratio: 13/9) {
+            .backgroundAnimation12 {
+                width: 100vh;
+                height: 100vh;
+            }
+        }
+
+        @keyframes backgroundAnimation12 {
+            0% {
+                opacity: 1;
+                transform: rotate(45deg);
+                top: 300vh;
+                left: -40vw;
+            }
+            50% {
+                opacity: 0.5;
+                transform: rotate(-45deg);
+                top: 200vh;
+                left: -60vw;
+            }
+            100% {
+                opacity: 1;
+                transform: rotate(45deg);
+                top: 300vh;
+                left: -40vw;
+            }
+        }
+    </style>
+    <head>
+    </head>
+    <body>
+        <div class="backgroundAnimations">
+            <div class="backgroundAnimation1"></div>
+            <div class="backgroundAnimation2"></div>
+            <div class="backgroundAnimation3"></div>
+            <div class="backgroundAnimation4"></div>
+            <div class="backgroundAnimation5"></div>
+            <div class="backgroundAnimation6"></div>
+            <div class="backgroundAnimation7"></div>
+            <div class="backgroundAnimation8"></div>
+            <div class="backgroundAnimation9"></div>
+            <div class="backgroundAnimation10"></div>
+            <div class="backgroundAnimation11"></div>
+            <div class="backgroundAnimation12"></div>
+        </div>
+    </body>
+</html>

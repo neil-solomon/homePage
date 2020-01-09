@@ -108,7 +108,7 @@ class MainComponent extends React.Component {
     }
 
     return (
-      <div>
+      <div style={{ fontFamily: "Helvetica" }}>
         <div style={{ zIndex: 1, position: "relative" }}>
           <div style={{ backgroundColor: "white" }}>
             <div className={this.state.headerClassNames[0]}>
