@@ -5,109 +5,203 @@ import Portfolio from "./Portfolio.js";
 import Connect from "./Connect.js";
 import Resume from "./Resume.js";
 
+import Scoreboard from "./images/scoreboard.jpg";
+import TicTacGrow from "./images/ticTacGrow.jpg";
+import RiskDiceRoller from "./images/riskDiceRoller.jpg";
+import VirtualBank from "./images/virtualBank.jpg";
+
 class MenuView extends React.Component {
   state = {
     className: "menuViewBlank",
     activeMenu: [false, false, false, false],
-    transitionOutMenuView: false,
     setActiveMenuTimeout: null
   };
 
+  componentWillUnmount() {
+    clearTimeout(this.state.setActiveMenuTimeout);
+  }
+
   componentDidUpdate(prevProps) {
     if (prevProps.activeMenu !== this.props.activeMenu) {
-      var className,
-        activeMenuId,
-        timeout = 250,
-        tl = gsap.timeline({ defaults: { ease: "sine" } });
+      var activeMenuId,
+        timeline1 = gsap.timeline({ defaults: { ease: "sine" } }),
+        timeline2 = gsap.timeline({ defaults: { ease: "sine" } });
+      var aboutWidth,
+        aboutHeight,
+        aboutLeft,
+        aboutRight,
+        portfolioWidth,
+        portfolioHeight,
+        portfolioLeft,
+        portfolioRight,
+        resumeWidth,
+        resumeHeight,
+        resumeLeft,
+        resumeRight,
+        connectWidth,
+        connectHeight,
+        connectLeft,
+        connectRight,
+        backgroundAnimationsHeight,
+        footerHeight;
+      if (this.props.windowIsLandscape) {
+        aboutWidth = "50vw";
+        aboutHeight = "300px";
+        aboutLeft = "25vw";
+        aboutRight = "25vw";
+        portfolioWidth = "90vw";
+        portfolioHeight = "900px";
+        portfolioLeft = "5vw";
+        portfolioRight = "5vw";
+        resumeWidth = "60vw";
+        resumeHeight = "1600px";
+        resumeLeft = "20vw";
+        resumeRight = "20vw";
+        connectWidth = "40vw";
+        connectHeight = "225px";
+        connectLeft = "30vw";
+        connectRight = "30vw";
+      } else {
+        aboutWidth = "80vw";
+        aboutHeight = "350px";
+        aboutLeft = "10vw";
+        aboutRight = "10vw";
+        portfolioWidth = "95vw";
+        portfolioHeight = "1600px";
+        portfolioLeft = "2.5vw";
+        portfolioRight = "2.5vw";
+        resumeWidth = "85vw";
+        resumeHeight = "1600px";
+        resumeLeft = "7.5vw";
+        resumeRight = "7.5vw";
+        connectWidth = "70vw";
+        connectHeight = "225px";
+        connectLeft = "15vw";
+        connectRight = "15vw";
+      }
       if (this.props.activeMenu[0]) {
-        tl.to(".menuViewContainer", {
-          duration: 1.25,
-          boxShadow: "0px 0px 10px rgb(0, 150, 136, 0.75)",
-          width: "50vw",
-          height: "300px",
-          marginLeft: "25vw",
-          marginRight: "25vw"
-        }).to(".menuViewContainer", {
-          duration: 0.75,
-          boxShadow: "0px 0px 10px rgb(0, 0, 0, 0.25)"
+        backgroundAnimationsHeight = "100vh";
+        footerHeight = "95vh";
+        timeline1
+          .to(".menuViewContainer", {
+            duration: 0.5,
+            boxShadow: "0px 0px 10px rgb(0, 150, 136, 0.75)"
+          })
+          .to(".menuViewContainer", {
+            duration: 0.5,
+            width: aboutWidth,
+            height: aboutHeight,
+            marginLeft: aboutLeft,
+            marginRight: aboutRight
+          })
+          .to(".menuViewContainer", {
+            duration: 0.5,
+            boxShadow: "0px 0px 10px rgb(0, 0, 0, 0.25)"
+          });
+        timeline2
+          .to(".menuContent", { duration: 0.5, opacity: 0 })
+          .to(".menuContent", { duration: 0.5, opacity: 1 }, "+=.5");
+        gsap.to(".backgroundAnimations", {
+          duration: 1.5,
+          height: backgroundAnimationsHeight
         });
-        gsap.to(".backgroundAnimations", { duration: 2, height: "700px" });
-        gsap.to(".footer", { duration: 2, top: "650px" });
+        gsap.to(".footer", { duration: 1.5, top: footerHeight });
         activeMenuId = 0;
       } else if (this.props.activeMenu[1]) {
-        tl.to(".menuViewContainer", {
-          duration: 1.25,
-          boxShadow: "0px 0px 10px rgb(0, 150, 136, 0.75)",
-          width: "90vw",
-          height: "900px",
-          marginLeft: "5vw",
-          marginRight: "5vw"
-        }).to(".menuViewContainer", {
-          duration: 0.75,
-          boxShadow: "0px 0px 10px rgb(0, 0, 0, 0.25)"
+        if (this.props.windowIsLandscape) {
+          backgroundAnimationsHeight = "1200px";
+          footerHeight = "1150px";
+        } else {
+          backgroundAnimationsHeight = "1900px";
+          footerHeight = "1850px";
+        }
+        timeline1
+          .to(".menuViewContainer", {
+            duration: 0.5,
+            boxShadow: "0px 0px 10px rgb(0, 150, 136, 0.75)"
+          })
+          .to(".menuViewContainer", {
+            duration: 0.5,
+            width: portfolioWidth,
+            height: portfolioHeight,
+            marginLeft: portfolioLeft,
+            marginRight: portfolioRight
+          })
+          .to(".menuViewContainer", {
+            duration: 0.5,
+            boxShadow: "0px 0px 10px rgb(0, 0, 0, 0.25)"
+          });
+        timeline2
+          .to(".menuContent", { duration: 0.5, opacity: 0 })
+          .to(".menuContent", { duration: 0.5, opacity: 1 }, "+=.5");
+        gsap.to(".backgroundAnimations", {
+          duration: 1.5,
+          height: backgroundAnimationsHeight
         });
-        gsap.to(".backgroundAnimations", { duration: 2, height: "1100px" });
-        gsap.to(".footer", { duration: 2, top: "1050px" });
+        gsap.to(".footer", { duration: 1.5, top: footerHeight });
         activeMenuId = 1;
       } else if (this.props.activeMenu[2]) {
+        backgroundAnimationsHeight = "1900px";
+        footerHeight = "1850px";
+        timeline1
+          .to(".menuViewContainer", {
+            duration: 0.5,
+            boxShadow: "0px 0px 10px rgb(0, 150, 136, 0.75)"
+          })
+          .to(".menuViewContainer", {
+            duration: 0.5,
+            width: resumeWidth,
+            height: resumeHeight,
+            marginLeft: resumeLeft,
+            marginRight: resumeRight
+          })
+          .to(".menuViewContainer", {
+            duration: 0.5,
+            boxShadow: "0px 0px 10px rgb(0, 0, 0, 0.25)"
+          });
+        timeline2
+          .to(".menuContent", { duration: 0.5, opacity: 0 })
+          .to(".menuContent", { duration: 0.5, opacity: 1 }, "+=.5");
+        gsap.to(".backgroundAnimations", {
+          duration: 1.5,
+          height: backgroundAnimationsHeight
+        });
+        gsap.to(".footer", { duration: 1.5, top: footerHeight });
         activeMenuId = 2;
       } else {
+        backgroundAnimationsHeight = "100vh";
+        footerHeight = "95vh";
+        timeline1
+          .to(".menuViewContainer", {
+            duration: 0.5,
+            boxShadow: "0px 0px 10px rgb(0, 150, 136, 0.75)"
+          })
+          .to(".menuViewContainer", {
+            duration: 0.5,
+            width: connectWidth,
+            height: connectHeight,
+            marginLeft: connectLeft,
+            marginRight: connectRight
+          })
+          .to(".menuViewContainer", {
+            duration: 0.5,
+            boxShadow: "0px 0px 10px rgb(0, 0, 0, 0.25)"
+          });
+        timeline2
+          .to(".menuContent", { duration: 0.5, opacity: 0 })
+          .to(".menuContent", { duration: 0.5, opacity: 1 }, "+=.5");
+        gsap.to(".backgroundAnimations", {
+          duration: 1.5,
+          height: backgroundAnimationsHeight
+        });
+        gsap.to(".footer", { duration: 1.5, top: footerHeight });
         activeMenuId = 3;
       }
-
-      // if (
-      //   !prevProps.activeMenu[0] &&
-      //   !prevProps.activeMenu[1] &&
-      //   !prevProps.activeMenu[2] &&
-      //   !prevProps.activeMenu[3]
-      // ) {
-      //   className = "menuViewBlankToAbout";
-      //   activeMenuId = 0;
-      //   timeout = 500;
-      // } else if (prevProps.activeMenu[0] && this.props.activeMenu[1]) {
-      //   className = "menuViewAboutToPortfolio";
-      //   activeMenuId = 1;
-      // } else if (prevProps.activeMenu[1] && this.props.activeMenu[0]) {
-      //   className = "menuViewPortfolioToAbout";
-      //   activeMenuId = 0;
-      // } else if (prevProps.activeMenu[0] && this.props.activeMenu[2]) {
-      //   className = "menuViewAboutToResume";
-      //   activeMenuId = 2;
-      // } else if (prevProps.activeMenu[2] && this.props.activeMenu[0]) {
-      //   className = "menuViewResumeToAbout";
-      //   activeMenuId = 0;
-      // } else if (prevProps.activeMenu[0] && this.props.activeMenu[3]) {
-      //   className = "menuViewAboutToConnect";
-      //   activeMenuId = 3;
-      // } else if (prevProps.activeMenu[3] && this.props.activeMenu[0]) {
-      //   className = "menuViewConnectToAbout";
-      //   activeMenuId = 0;
-      // } else if (prevProps.activeMenu[1] && this.props.activeMenu[2]) {
-      //   className = "menuViewPortfolioToResume";
-      //   activeMenuId = 2;
-      // } else if (prevProps.activeMenu[2] && this.props.activeMenu[1]) {
-      //   className = "menuViewResumeToPortfolio";
-      //   activeMenuId = 1;
-      // } else if (prevProps.activeMenu[1] && this.props.activeMenu[3]) {
-      //   className = "menuViewPortfolioToConnect";
-      //   activeMenuId = 3;
-      // } else if (prevProps.activeMenu[3] && this.props.activeMenu[1]) {
-      //   className = "menuViewConnectToPortfolio";
-      //   activeMenuId = 1;
-      // } else if (prevProps.activeMenu[2] && this.props.activeMenu[3]) {
-      //   className = "menuViewResumeToConnect";
-      //   activeMenuId = 3;
-      // } else if (prevProps.activeMenu[3] && this.props.activeMenu[2]) {
-      //   className = "menuViewConnectToResume";
-      //   activeMenuId = 2;
-      // }
       var setActiveMenuTimeout = setTimeout(
         () => this.setActiveMenu(activeMenuId),
-        timeout
+        500
       );
       this.setState({ setActiveMenuTimeout });
-      // this.setState({ className });
-      this.setState({ transitionOutMenuView: true });
     }
   }
 
@@ -120,8 +214,6 @@ class MenuView extends React.Component {
         activeMenu[i] = false;
       }
     }
-    clearTimeout(this.state.setActiveMenuTimeout);
-    this.setState({ transitionOutMenuView: false });
     this.setState({ activeMenu });
   };
 
@@ -129,38 +221,39 @@ class MenuView extends React.Component {
     var menuView;
     if (this.state.activeMenu[0]) {
       menuView = (
-        <About
-          windowIsLandscape={this.props.windowIsLandscape}
-          transitionOut={this.state.transitionOutMenuView}
-        ></About>
+        <div className="menuContent">
+          <About windowIsLandscape={this.props.windowIsLandscape}></About>
+        </div>
       );
     } else if (this.state.activeMenu[1]) {
       menuView = (
-        <Portfolio
-          windowIsLandscape={this.props.windowIsLandscape}
-          transitionOut={this.state.transitionOutMenuView}
-        ></Portfolio>
+        <div className="menuContent">
+          <Portfolio
+            windowIsLandscape={this.props.windowIsLandscape}
+            Scoreboard={Scoreboard}
+            TicTacGrow={TicTacGrow}
+            RiskDiceRoller={RiskDiceRoller}
+            VirtualBank={VirtualBank}
+          ></Portfolio>
+        </div>
       );
     } else if (this.state.activeMenu[2]) {
       menuView = (
-        <Resume
-          windowIsLandscape={this.props.windowIsLandscape}
-          transitionOut={this.state.transitionOutMenuView}
-        ></Resume>
+        <div className="menuContent">
+          <Resume windowIsLandscape={this.props.windowIsLandscape}></Resume>
+        </div>
       );
     } else if (this.state.activeMenu[3]) {
       menuView = (
-        <Connect
-          windowIsLandscape={this.props.windowIsLandscape}
-          transitionOut={this.state.transitionOutMenuView}
-        ></Connect>
+        <div className="menuContent">
+          <Connect windowIsLandscape={this.props.windowIsLandscape}></Connect>
+        </div>
       );
     }
 
     return (
       <div
-        style={{ backgroundColor: "white" }}
-        //className={this.state.className}
+        style={{ backgroundColor: "white", borderRadius: "10px" }}
         className="menuViewContainer"
       >
         {menuView}

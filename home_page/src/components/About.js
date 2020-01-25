@@ -1,35 +1,7 @@
 import React from "react";
 
 class About extends React.Component {
-  state = {
-    animationTimeout: null
-  };
-
-  componentDidMount() {
-    var animationTimeout = setTimeout(() => this.animationTimeout(), 1000);
-    this.setState({ animationTimeout });
-  }
-
-  componentWillUnmount() {
-    clearTimeout(this.state.animationTimeout);
-  }
-
-  animationTimeout = () => {
-    clearTimeout(this.state.animationTimeout);
-    this.setState({ animationTimeout: null });
-  };
-
   render() {
-    if (this.state.animationTimeout != null) {
-      return null;
-    }
-    var className;
-    if (this.props.transitionOut) {
-      className = "menuContentTransitionOut";
-    } else {
-      className = "menuContentTransitionIn";
-    }
-
     var style;
     if (this.props.windowIsLandscape) {
       style = {
@@ -50,7 +22,7 @@ class About extends React.Component {
     }
 
     return (
-      <div className={className}>
+      <div>
         <div style={style}>
           Hello!<br></br>
           <br></br>I am a student majoring in Computer Engineering and working

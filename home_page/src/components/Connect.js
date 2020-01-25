@@ -3,22 +3,7 @@ import { Icon } from "antd";
 
 class Connect extends React.Component {
   state = {
-    animationTimeout: null,
-    iconClassNames: ["connectIcon", "connectIcon"] // linkedin icon, github icon
-  };
-
-  componentDidMount() {
-    var animationTimeout = setTimeout(() => this.animationTimeout(), 1000);
-    this.setState({ animationTimeout });
-  }
-
-  componentWillUnmount() {
-    clearTimeout(this.state.animationTimeout);
-  }
-
-  animationTimeout = () => {
-    clearTimeout(this.state.animationTimeout);
-    this.setState({ animationTimeout: null });
+    iconClassNames: ["connectIcon", "connectIcon", "connectIcon"] // linkedin icon, github icon,email
   };
 
   hoverIn = value => {
@@ -34,17 +19,6 @@ class Connect extends React.Component {
   };
 
   render() {
-    if (this.state.animationTimeout != null) {
-      return null;
-    }
-
-    var containerClassName;
-    if (this.props.transitionOut) {
-      containerClassName = "menuContentTransitionOut";
-    } else {
-      containerClassName = "menuContentTransitionIn";
-    }
-
     var textStyle;
     if (this.props.windowIsLandscape) {
       textStyle = {
@@ -65,12 +39,21 @@ class Connect extends React.Component {
     }
 
     return (
-      <div className={containerClassName}>
+      <div>
         <div style={textStyle}>
-          Please connect with me on LinkedIn! Also, check out the source code
-          for all of my projects on Github.
+          Please shoot me an email and connect with me on LinkedIn! Also, check
+          out the source code for all of my projects on Github.
         </div>
         <div className="connectIcons">
+          <a href="mailto:neilsolomon89@gmail.com">
+            <span className={this.state.iconClassNames[2]}>
+              <Icon
+                onMouseEnter={() => this.hoverIn(2)}
+                onMouseLeave={() => this.hoverOut(2)}
+                type="mail"
+              ></Icon>
+            </span>
+          </a>
           <a href="https://www.linkedin.com/in/neil-solomon/" target="blank">
             <span className={this.state.iconClassNames[0]}>
               <Icon

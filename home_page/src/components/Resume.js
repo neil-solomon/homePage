@@ -4,7 +4,6 @@ import resumePdf from "./images/NeilSolomon_Jan2020.pdf";
 
 class Resume extends React.Component {
   state = {
-    animationTimeout: null,
     downloadClassName: "resumeDownloadHoverOut"
   };
 
@@ -18,20 +17,6 @@ class Resume extends React.Component {
 
   highlightStyle = { color: "#009688" };
 
-  componentDidMount() {
-    var animationTimeout = setTimeout(() => this.animationTimeout(), 1000);
-    this.setState({ animationTimeout });
-  }
-
-  componentWillUnmount() {
-    clearTimeout(this.state.animationTimeout);
-  }
-
-  animationTimeout = () => {
-    clearTimeout(this.state.animationTimeout);
-    this.setState({ animationTimeout: null });
-  };
-
   toggleDownloadHover = () => {
     if (this.state.downloadClassName === "resumeDownloadHoverIn") {
       this.setState({ downloadClassName: "resumeDownloadHoverOut" });
@@ -41,16 +26,6 @@ class Resume extends React.Component {
   };
 
   render() {
-    if (this.state.animationTimeout != null) {
-      return null;
-    }
-    var className;
-    if (this.props.transitionOut) {
-      className = "menuContentTransitionOut";
-    } else {
-      className = "menuContentTransitionIn";
-    }
-
     var textStyle, breakStyle;
     if (this.props.windowIsLandscape) {
       breakStyle = {
@@ -89,7 +64,7 @@ class Resume extends React.Component {
     }
 
     return (
-      <div className={className}>
+      <div>
         <div style={textStyle}>
           <div style={this.highlightStyle}>EDUCATION</div>
           <br></br>

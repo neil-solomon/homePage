@@ -1,8 +1,9 @@
 import React from "react";
+import gsap from "gsap";
 import "./css/globals.css";
 import "./css/header.css";
 import "./css/menu.css";
-import "./css/menuViewTransitions.css";
+// import "./css/menuViewTransitions.css";
 import "./css/backgroundAnimations.css";
 import "./css/connectIcons.css";
 import "./css/resume.css";
@@ -29,6 +30,20 @@ class MainComponent extends React.Component {
   };
 
   componentDidMount() {
+    var timeline = gsap.timeline();
+    timeline
+      .to(".menuViewContainer", {
+        duration: 0.5,
+        opacity: 0
+      })
+      .to(
+        ".menuViewContainer",
+        {
+          duration: 0.5,
+          opacity: 1
+        },
+        "+=3"
+      );
     var activateMenuTimeout = setTimeout(() => this.toggleMenus(0), 2250);
     var changeHeaderTimeout = setTimeout(() => this.changeHeaderStyles(), 2200);
     window.addEventListener("resize", this.windowResize);
